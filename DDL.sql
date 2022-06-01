@@ -34,9 +34,9 @@ CREATE TABLE manufacturer (
     address_id          VARCHAR2 (36) NOT NULL,
     contact_id          VARCHAR2 (36) NOT NULL,
     
-    CONSTRAINT  manufacturer_pk PRIMARY KEY (id),
-    CONSTRAINT  address_fk      FOREIGN KEY (address_id) REFERENCES address(id),
-    CONSTRAINT  contact_fk      FOREIGN KEY (contact_id) REFERENCES contact(id)
+    CONSTRAINT  manufacturer_pk         PRIMARY KEY (id),
+    CONSTRAINT  manufacturer_address_fk FOREIGN KEY (address_id) REFERENCES address(id),
+    CONSTRAINT  manufacturer_contact_fk FOREIGN KEY (contact_id) REFERENCES contact(id)
 );
 
 CREATE TABLE product_category (
@@ -53,9 +53,9 @@ CREATE TABLE product (
     price                   NUMBER (9, 2) NOT NULL,
     manufacturer_id         VARCHAR2 (36) NOT NULL,
     
-    CONSTRAINT  product_pk          PRIMARY KEY (id),
-    CONSTRAINT  manufacturer_fk     FOREIGN KEY (manufacturer_id) REFERENCES manufacturer(id),
-    CONSTRAINT  product_category_fk FOREIGN KEY (product_category_id) REFERENCES product_category(id)
+    CONSTRAINT  product_pk              PRIMARY KEY (id),
+    CONSTRAINT  product_manufacturer_fk FOREIGN KEY (manufacturer_id) REFERENCES manufacturer(id),
+    CONSTRAINT  product_category_fk     FOREIGN KEY (product_category_id) REFERENCES product_category(id)
 );
 
 
@@ -65,8 +65,8 @@ CREATE TABLE batch (
     manufacturer_date       DATE NOT NULL,
     expiration_date         DATE NOT NULL,
     
-    CONSTRAINT  batch_pk    PRIMARY KEY (id),
-    CONSTRAINT  product_fk  FOREIGN KEY (product_id) REFERENCES product(id)
+    CONSTRAINT  batch_pk            PRIMARY KEY (id),
+    CONSTRAINT  batch_product_fk    FOREIGN KEY (product_id) REFERENCES product(id)
 );
 
 CREATE TABLE sku (
@@ -75,10 +75,10 @@ CREATE TABLE sku (
     batch_id                VARCHAR2 (36) NOT NULL,
     outlet_code             VARCHAR2 (4) NOT NULL,
     
-    CONSTRAINT  sku_pk      PRIMARY KEY (id),
-    CONSTRAINT  product_fk  FOREIGN KEY (product_id) REFERENCES product(id),
-    CONSTRAINT  batch_fk    FOREIGN KEY (batch_id) REFERENCES batch(id),
-    CONSTRAINT  outlet_fk   FOREIGN KEY (outlet_code) REFERENCES outlet(code)
+    CONSTRAINT  sku_pk          PRIMARY KEY (id),
+    CONSTRAINT  sku_product_fk  FOREIGN KEY (product_id) REFERENCES product(id),
+    CONSTRAINT  sku_batch_fk    FOREIGN KEY (batch_id) REFERENCES batch(id),
+    CONSTRAINT  sku_outlet_fk   FOREIGN KEY (outlet_code) REFERENCES outlet(code)
 );
 
 CREATE TABLE loyalty (
@@ -100,21 +100,11 @@ CREATE TABLE customer (
     contact_id              VARCHAR2 (36) NOT NULL,
     loyalty_id              VARCHAR2 (36) NOT NULL,
     
-    CONSTRAINT  customer_pk     PRIMARY KEY (id),
-    CONSTRAINT  contact_fk      FOREIGN KEY (contact_id) REFERENCES contact(id),
-    CONSTRAINT  loyalty_fk      FOREIGN KEY (loyalty_id) REFERENCES loyalty(id)
+    CONSTRAINT  customer_pk             PRIMARY KEY (id),
+    CONSTRAINT  customer_contact_fk     FOREIGN KEY (contact_id) REFERENCES contact(id),
+    CONSTRAINT  customer_loyalty_fk     FOREIGN KEY (loyalty_id) REFERENCES loyalty(id)
 );
 
-CREATE TABLE purchase_history (
-    id                      VARCHAR2 (36) NOT NULL,
-    bill_id                 VARCHAR2 (36) NOT NULL,
-    sku_id                  VARCHAR2 (36) NOT NULL,
-    quantity                NUMBER(3) NOT NULL,
-    
-    CONSTRAINT  purchase_history_pk PRIMARY KEY (id),
-    CONSTRAINT  sku_fk              FOREIGN KEY (sku_id) REFERENCES sku(id),
-    CONSTRAINT  bill_fk             FOREIGN KEY (bill_id) REFERENCES bill(id)
-);
 
 CREATE TABLE bill (
     id                      VARCHAR2 (36) NOT NULL,
@@ -123,11 +113,23 @@ CREATE TABLE bill (
     customer_id             VARCHAR2 (36) NOT NULL,
     loyalty_id              VARCHAR2 (36),
     
-    CONSTRAINT  bill_pk             PRIMARY KEY (id),
-    CONSTRAINT  outlet_fk           FOREIGN KEY (outlet_code) REFERENCES outlet(code),
-    CONSTRAINT  customer_fk         FOREIGN KEY (customer_id) REFERENCES customer(id),
-    CONSTRAINT  loyalty_fk          FOREIGN KEY (loyalty_id) REFERENCES loyalty(id)
+    CONSTRAINT  bill_pk                 PRIMARY KEY (id),
+    CONSTRAINT  bill_outlet_fk          FOREIGN KEY (outlet_code) REFERENCES outlet(code),
+    CONSTRAINT  bill_customer_fk        FOREIGN KEY (customer_id) REFERENCES customer(id),
+    CONSTRAINT  bill_loyalty_fk         FOREIGN KEY (loyalty_id) REFERENCES loyalty(id)
 );
+
+CREATE TABLE purchase_history (
+    id                      VARCHAR2 (36) NOT NULL,
+    bill_id                 VARCHAR2 (36) NOT NULL,
+    sku_id                  VARCHAR2 (36) NOT NULL,
+    quantity                NUMBER(3) NOT NULL,
+    
+    CONSTRAINT  purchase_history_pk         PRIMARY KEY (id),
+    CONSTRAINT  purchase_history_sku_fk     FOREIGN KEY (sku_id) REFERENCES sku(id),
+    CONSTRAINT  purchase_history_bill_fk    FOREIGN KEY (bill_id) REFERENCES bill(id)
+);
+
 
 CREATE TABLE supplier (
     id          VARCHAR2 (36) NOT NULL,
@@ -135,20 +137,9 @@ CREATE TABLE supplier (
     address_id  VARCHAR2 (36) NOT NULL,
     contact_id  VARCHAR2 (36) NOT NULL,
     
-    CONSTRAINT  supplier_pk   PRIMARY KEY (id),
-    CONSTRAINT  address_fk  FOREIGN KEY (address_id) REFERENCES address(id),
-    CONSTRAINT  contact_fk  FOREIGN KEY (contact_id) REFERENCES contact(id)
-);
-
-CREATE TABLE purchase_order_sku (
-    id                      VARCHAR2 (36) NOT NULL,
-    purchase_order_id       VARCHAR2 (36) NOT NULL,
-    sku_id                  VARCHAR2 (36) NOT NULL,
-    quantity                NUMBER(5) NOT NULL,
-    
-    CONSTRAINT  purchase_order_sku_pk PRIMARY KEY (id),
-    CONSTRAINT  purchase_order_fk       FOREIGN KEY (purchase_order_id) REFERENCES purchase_order(id),
-    CONSTRAINT  sku_fk                  FOREIGN KEY (sku_id) REFERENCES sku(id)
+    CONSTRAINT  supplier_pk         PRIMARY KEY (id),
+    CONSTRAINT  supplier_address_fk FOREIGN KEY (address_id) REFERENCES address(id),
+    CONSTRAINT  supplier_contact_fk FOREIGN KEY (contact_id) REFERENCES contact(id)
 );
 
 CREATE TABLE purchase_order (
@@ -157,9 +148,20 @@ CREATE TABLE purchase_order (
     outlet_code             VARCHAR2 (4) NOT NULL,
     supplier_id             VARCHAR2 (36) NOT NULL,
     
-    CONSTRAINT  bill_pk             PRIMARY KEY (id),
-    CONSTRAINT  outlet_fk           FOREIGN KEY (outlet_code) REFERENCES outlet(code),
-    CONSTRAINT  supplier_fk         FOREIGN KEY (supplier_id) REFERENCES supplier(id)
+    CONSTRAINT  po_pk           PRIMARY KEY (id),
+    CONSTRAINT  po_outlet_fk    FOREIGN KEY (outlet_code) REFERENCES outlet(code),
+    CONSTRAINT  po_supplier_fk  FOREIGN KEY (supplier_id) REFERENCES supplier(id)
+);
+
+CREATE TABLE purchase_order_sku (
+    id                      VARCHAR2 (36) NOT NULL,
+    purchase_order_id       VARCHAR2 (36) NOT NULL,
+    sku_id                  VARCHAR2 (36) NOT NULL,
+    quantity                NUMBER(5) NOT NULL,
+    
+    CONSTRAINT  po_sku_pk       PRIMARY KEY (id),
+    CONSTRAINT  po_sku_po_fk    FOREIGN KEY (purchase_order_id) REFERENCES purchase_order(id),
+    CONSTRAINT  po_sku_sku_fk   FOREIGN KEY (sku_id) REFERENCES sku(id)
 );
 
 /* Change the data format from DD-MON-RR to YYYY-MM-DD */
