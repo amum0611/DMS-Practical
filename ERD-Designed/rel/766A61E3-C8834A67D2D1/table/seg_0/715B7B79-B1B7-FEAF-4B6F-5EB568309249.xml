@@ -1,0 +1,113 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Table class="oracle.dbtools.crest.model.design.relational.Table" directorySegmentName="seg_0" id="715B7B79-B1B7-FEAF-4B6F-5EB568309249" schemaObject="1285608C-874B-0095-6FAC-50A6A5AF2F05" name="ADDRESS">
+<sourceConnName>DMS Practical CB003033</sourceConnName>
+<sourceObjSchema>ADMIN</sourceObjSchema>
+<sourceObjName>ADDRESS</sourceObjName>
+<createdBy>azeemmumtaz</createdBy>
+<createdTime>2022-06-01 16:06:03 UTC</createdTime>
+<ownerDesignName>ERD-Designed</ownerDesignName>
+<allowColumnReorder>false</allowColumnReorder>
+<existDependencyGenerateInDDl>true</existDependencyGenerateInDDl>
+<parsed>true</parsed>
+<columns itemClass="oracle.dbtools.crest.model.design.relational.Column">
+<Column name="ID" id="DA0207AA-2AAE-CDDF-A4E7-A514188F7261">
+<sourceConnName>DMS Practical CB003033</sourceConnName>
+<sourceObjSchema>ADDRESS</sourceObjSchema>
+<sourceObjName>ID</sourceObjName>
+<createdBy>azeemmumtaz</createdBy>
+<createdTime>2022-06-01 16:06:04 UTC</createdTime>
+<ownerDesignName>ERD-Designed</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>36 BYTE</dataTypeSize>
+<ownDataTypeParameters>36 BYTE,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="ADDRESS" id="569ECF73-1F22-A098-4267-EF4969D4E104">
+<sourceConnName>DMS Practical CB003033</sourceConnName>
+<sourceObjSchema>ADDRESS</sourceObjSchema>
+<sourceObjName>ADDRESS</sourceObjName>
+<createdBy>azeemmumtaz</createdBy>
+<createdTime>2022-06-01 16:06:04 UTC</createdTime>
+<ownerDesignName>ERD-Designed</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>50 BYTE</dataTypeSize>
+<ownDataTypeParameters>50 BYTE,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="CITY" id="36A36FDA-1D78-809B-DBE2-28D59A8C2076">
+<sourceConnName>DMS Practical CB003033</sourceConnName>
+<sourceObjSchema>ADDRESS</sourceObjSchema>
+<sourceObjName>CITY</sourceObjName>
+<createdBy>azeemmumtaz</createdBy>
+<createdTime>2022-06-01 16:06:04 UTC</createdTime>
+<ownerDesignName>ERD-Designed</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>25 BYTE</dataTypeSize>
+<ownDataTypeParameters>25 BYTE,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="DISTRICT" id="B707A3C1-4A33-A94B-AA04-24BA480DBFE9">
+<sourceConnName>DMS Practical CB003033</sourceConnName>
+<sourceObjSchema>ADDRESS</sourceObjSchema>
+<sourceObjName>DISTRICT</sourceObjName>
+<createdBy>azeemmumtaz</createdBy>
+<createdTime>2022-06-01 16:06:04 UTC</createdTime>
+<ownerDesignName>ERD-Designed</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>50 BYTE</dataTypeSize>
+<ownDataTypeParameters>50 BYTE,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="PROVINCE" id="E74CEC85-1323-C6B1-04F6-97585F082264">
+<sourceConnName>DMS Practical CB003033</sourceConnName>
+<sourceObjSchema>ADDRESS</sourceObjSchema>
+<sourceObjName>PROVINCE</sourceObjName>
+<createdBy>azeemmumtaz</createdBy>
+<createdTime>2022-06-01 16:06:04 UTC</createdTime>
+<ownerDesignName>ERD-Designed</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>50 BYTE</dataTypeSize>
+<ownDataTypeParameters>50 BYTE,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+</columns>
+<indexes itemClass="oracle.dbtools.crest.model.design.relational.Index">
+<ind_PK_UK id="5CFD37A3-E971-04EC-F908-92ED8F32F495" name="ADDRESS_PK">
+<sourceConnName>DMS Practical CB003033</sourceConnName>
+<sourceObjSchema>ADMIN</sourceObjSchema>
+<sourceObjName>ADDRESS_PK</sourceObjName>
+<createdBy>azeemmumtaz</createdBy>
+<createdTime>2022-06-01 16:06:11 UTC</createdTime>
+<ownerDesignName>ERD-Designed</ownerDesignName>
+<pk>true</pk>
+<indexState>Primary Constraint</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="DA0207AA-2AAE-CDDF-A4E7-A514188F7261"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="1A8F9178-9CF6-20D0-A803-37B9ACCD34EF" schemaObject="1285608C-874B-0095-6FAC-50A6A5AF2F05" name="ADDRESS_PK">
+<sourceConnName>DMS Practical CB003033</sourceConnName>
+<sourceObjSchema>ADMIN</sourceObjSchema>
+<sourceObjName>ADDRESS_PK</sourceObjName>
+<createdBy>azeemmumtaz</createdBy>
+<createdTime>2022-06-01 16:06:06 UTC</createdTime>
+<ownerDesignName>ERD-Designed</ownerDesignName>
+<indexState>Unique Plain Index</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="DA0207AA-2AAE-CDDF-A4E7-A514188F7261"/>
+</indexColumnUsage>
+</ind_PK_UK>
+</indexes>
+</Table>

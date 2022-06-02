@@ -1,0 +1,92 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<TableProxyOraclev12c class="oracle.dbtools.crest.model.design.storage.oracle.v12c.TableProxyOraclev12c" name="CUSTOMER" directorySegmentName="seg_0" id="0DAA49B7-DCD4-7768-2C2A-36419269BC70">
+<createdBy>azeemmumtaz</createdBy>
+<createdTime>2022-06-01 16:06:00 UTC</createdTime>
+<ownerDesignName>ERD-Designed</ownerDesignName>
+<schemaObject>1285608C-874B-0095-6FAC-50A6A5AF2F05</schemaObject>
+<logging>YES</logging>
+<partitionedRowMovement>DISABLE</partitionedRowMovement>
+<segment>DB33B8D4-5D56-2942-CB42-4C76D6E64160</segment>
+<tableSpace>DAB70A09-768F-364B-D0D5-CE259F3D96B1</tableSpace>
+<temporaryChanged>false</temporaryChanged>
+<accessDriverType>oracle_loader</accessDriverType>
+<rejectLimit></rejectLimit>
+<inMemory>NO</inMemory>
+<columnProxies itemClass="oracle.dbtools.crest.model.design.storage.oracle.v12c.ColumnProxyOraclev12c">
+<ColumnProxy name="NIC" id="13906727-E1D6-DBB1-9DE7-7500C6AC4A07">
+<createdBy>azeemmumtaz</createdBy>
+<createdTime>2022-06-01 16:06:04 UTC</createdTime>
+<ownerDesignName>ERD-Designed</ownerDesignName>
+</ColumnProxy>
+<ColumnProxy name="LAST_NAME" id="5531AD84-804A-C419-09D8-C0DDD31E5BB7">
+<createdBy>azeemmumtaz</createdBy>
+<createdTime>2022-06-01 16:06:04 UTC</createdTime>
+<ownerDesignName>ERD-Designed</ownerDesignName>
+</ColumnProxy>
+<ColumnProxy name="CONTACT_ID" id="596CA4D0-CFA5-AF0D-D883-AFF6B0FEA83B">
+<createdBy>azeemmumtaz</createdBy>
+<createdTime>2022-06-01 16:06:04 UTC</createdTime>
+<ownerDesignName>ERD-Designed</ownerDesignName>
+</ColumnProxy>
+<ColumnProxy name="FIRST_NAME" id="7269C26C-3E15-DE07-4939-F273AF93130D">
+<createdBy>azeemmumtaz</createdBy>
+<createdTime>2022-06-01 16:06:04 UTC</createdTime>
+<ownerDesignName>ERD-Designed</ownerDesignName>
+</ColumnProxy>
+<ColumnProxy name="ID" id="A3BD99C0-0D2D-EF84-CD7E-64E539A806C8">
+<createdBy>azeemmumtaz</createdBy>
+<createdTime>2022-06-01 16:06:04 UTC</createdTime>
+<ownerDesignName>ERD-Designed</ownerDesignName>
+</ColumnProxy>
+<ColumnProxy name="DATE_OF_BIRTH" id="AFC250AF-1BC9-2AA9-66E8-8FACD04090EF">
+<createdBy>azeemmumtaz</createdBy>
+<createdTime>2022-06-01 16:06:04 UTC</createdTime>
+<ownerDesignName>ERD-Designed</ownerDesignName>
+</ColumnProxy>
+<ColumnProxy name="LOYALTY_ID" id="C545668A-17E3-86C6-8703-0FF832FA027A">
+<createdBy>azeemmumtaz</createdBy>
+<createdTime>2022-06-01 16:06:04 UTC</createdTime>
+<ownerDesignName>ERD-Designed</ownerDesignName>
+</ColumnProxy>
+<ColumnProxy name="GENDER" id="FB04A82F-888E-523E-7711-ACA0E66A1918">
+<createdBy>azeemmumtaz</createdBy>
+<createdTime>2022-06-01 16:06:04 UTC</createdTime>
+<ownerDesignName>ERD-Designed</ownerDesignName>
+</ColumnProxy>
+</columnProxies>
+<indexProxies>
+<IndexProxy class="oracle.dbtools.crest.model.design.storage.oracle.v10g.IndexProxyOraclev10g" name="CUSTOMER_PK" id="A24CD332-88AF-8C0D-9CEC-3D6211EA2331">
+<createdBy>azeemmumtaz</createdBy>
+<createdTime>2022-06-01 16:06:07 UTC</createdTime>
+<ownerDesignName>ERD-Designed</ownerDesignName>
+<schemaObject>1285608C-874B-0095-6FAC-50A6A5AF2F05</schemaObject>
+<segment>34C5772F-B68B-85F9-7FD1-F5E4E9B56A5A</segment>
+<tableSpace>DAB70A09-768F-364B-D0D5-CE259F3D96B1</tableSpace>
+</IndexProxy>
+</indexProxies>
+<foreignKeys>
+<ForeignKey class="oracle.dbtools.crest.model.design.storage.oracle.v10g.FKProxyOraclev10g" name="CUSTOMER_LOYALTY_FK" id="227C4453-36B8-DCD6-78CB-DAE4F6E7BDF1">
+<createdBy>azeemmumtaz</createdBy>
+<createdTime>2022-06-01 16:06:13 UTC</createdTime>
+<ownerDesignName>ERD-Designed</ownerDesignName>
+</ForeignKey>
+<ForeignKey class="oracle.dbtools.crest.model.design.storage.oracle.v10g.FKProxyOraclev10g" name="CUSTOMER_CONTACT_FK" id="326292F2-DE54-37CC-EA8C-D32B31829F1C">
+<createdBy>azeemmumtaz</createdBy>
+<createdTime>2022-06-01 16:06:13 UTC</createdTime>
+<ownerDesignName>ERD-Designed</ownerDesignName>
+</ForeignKey>
+</foreignKeys>
+<primaryKeys>
+<PrimaryKey class="oracle.dbtools.crest.model.design.storage.oracle.v10g.PKProxyOraclev10g" name="CUSTOMER_PK" id="6F8A38C1-B3C5-455C-616A-96B75CDCD2E8">
+<createdBy>azeemmumtaz</createdBy>
+<createdTime>2022-06-01 16:06:11 UTC</createdTime>
+<ownerDesignName>ERD-Designed</ownerDesignName>
+<segment>34C5772F-B68B-85F9-7FD1-F5E4E9B56A5A</segment>
+<tableSpace>DAB70A09-768F-364B-D0D5-CE259F3D96B1</tableSpace>
+<existingIndex>A24CD332-88AF-8C0D-9CEC-3D6211EA2331</existingIndex>
+<indexSegment>34C5772F-B68B-85F9-7FD1-F5E4E9B56A5A</indexSegment>
+<indexSort>SORTED</indexSort>
+<usingIndex>BY INDEX NAME</usingIndex>
+</PrimaryKey>
+</primaryKeys>
+</TableProxyOraclev12c>

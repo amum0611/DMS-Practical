@@ -1,0 +1,139 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Table class="oracle.dbtools.crest.model.design.relational.Table" directorySegmentName="seg_0" id="9412702D-800B-9F68-0899-3BE6B4B7352F" schemaObject="1285608C-874B-0095-6FAC-50A6A5AF2F05" name="MANUFACTURER">
+<sourceConnName>DMS Practical CB003033</sourceConnName>
+<sourceObjSchema>ADMIN</sourceObjSchema>
+<sourceObjName>MANUFACTURER</sourceObjName>
+<createdBy>azeemmumtaz</createdBy>
+<createdTime>2022-06-01 16:05:59 UTC</createdTime>
+<ownerDesignName>ERD-Designed</ownerDesignName>
+<allowColumnReorder>false</allowColumnReorder>
+<existDependencyGenerateInDDl>true</existDependencyGenerateInDDl>
+<parsed>true</parsed>
+<columns itemClass="oracle.dbtools.crest.model.design.relational.Column">
+<Column name="ID" id="2B8DF66C-6FE1-1D48-B8E7-486E74D6BD17">
+<sourceConnName>DMS Practical CB003033</sourceConnName>
+<sourceObjSchema>MANUFACTURER</sourceObjSchema>
+<sourceObjName>ID</sourceObjName>
+<createdBy>azeemmumtaz</createdBy>
+<createdTime>2022-06-01 16:06:04 UTC</createdTime>
+<ownerDesignName>ERD-Designed</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>36 BYTE</dataTypeSize>
+<ownDataTypeParameters>36 BYTE,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="NAME" id="44B6DDF4-A420-398B-D9D0-01C800DFF5DF">
+<sourceConnName>DMS Practical CB003033</sourceConnName>
+<sourceObjSchema>MANUFACTURER</sourceObjSchema>
+<sourceObjName>NAME</sourceObjName>
+<createdBy>azeemmumtaz</createdBy>
+<createdTime>2022-06-01 16:06:04 UTC</createdTime>
+<ownerDesignName>ERD-Designed</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>50 BYTE</dataTypeSize>
+<ownDataTypeParameters>50 BYTE,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="REGISTRATION_CODE" id="B44C8062-DD78-51B3-3569-4F914FB6EDCF">
+<sourceConnName>DMS Practical CB003033</sourceConnName>
+<sourceObjSchema>MANUFACTURER</sourceObjSchema>
+<sourceObjName>REGISTRATION_CODE</sourceObjName>
+<createdBy>azeemmumtaz</createdBy>
+<createdTime>2022-06-01 16:06:04 UTC</createdTime>
+<ownerDesignName>ERD-Designed</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>10 BYTE</dataTypeSize>
+<ownDataTypeParameters>10 BYTE,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="ADDRESS_ID" id="70A86D66-2531-9400-867A-6A4EA99D5BCC">
+<sourceConnName>DMS Practical CB003033</sourceConnName>
+<sourceObjSchema>MANUFACTURER</sourceObjSchema>
+<sourceObjName>ADDRESS_ID</sourceObjName>
+<createdBy>azeemmumtaz</createdBy>
+<createdTime>2022-06-01 16:06:04 UTC</createdTime>
+<ownerDesignName>ERD-Designed</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>36 BYTE</dataTypeSize>
+<ownDataTypeParameters>36 BYTE,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="7C1523C4-5547-905C-0210-6F6B917209B9" referredColumn="DA0207AA-2AAE-CDDF-A4E7-A514188F7261"/>
+</associations>
+</Column>
+<Column name="CONTACT_ID" id="058138B0-7DCA-D4FC-F5D5-EFA0A8B871DA">
+<sourceConnName>DMS Practical CB003033</sourceConnName>
+<sourceObjSchema>MANUFACTURER</sourceObjSchema>
+<sourceObjName>CONTACT_ID</sourceObjName>
+<createdBy>azeemmumtaz</createdBy>
+<createdTime>2022-06-01 16:06:04 UTC</createdTime>
+<ownerDesignName>ERD-Designed</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>36 BYTE</dataTypeSize>
+<ownDataTypeParameters>36 BYTE,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="67965654-D334-1969-ABE2-B4A220FA168E" referredColumn="C6C8EBBE-A96A-793F-A781-C7C10C9D4F09"/>
+</associations>
+</Column>
+</columns>
+<indexes itemClass="oracle.dbtools.crest.model.design.relational.Index">
+<ind_PK_UK id="E2FAE976-9133-46DB-BCAF-3B5FE02ABB78" name="MANUFACTURER_PK">
+<sourceConnName>DMS Practical CB003033</sourceConnName>
+<sourceObjSchema>ADMIN</sourceObjSchema>
+<sourceObjName>MANUFACTURER_PK</sourceObjName>
+<createdBy>azeemmumtaz</createdBy>
+<createdTime>2022-06-01 16:06:11 UTC</createdTime>
+<ownerDesignName>ERD-Designed</ownerDesignName>
+<pk>true</pk>
+<indexState>Primary Constraint</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="2B8DF66C-6FE1-1D48-B8E7-486E74D6BD17"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="F1529F1B-A238-E3C5-53F5-9763C05EB647" schemaObject="1285608C-874B-0095-6FAC-50A6A5AF2F05" name="MANUFACTURER_PK">
+<sourceConnName>DMS Practical CB003033</sourceConnName>
+<sourceObjSchema>ADMIN</sourceObjSchema>
+<sourceObjName>MANUFACTURER_PK</sourceObjName>
+<createdBy>azeemmumtaz</createdBy>
+<createdTime>2022-06-01 16:06:08 UTC</createdTime>
+<ownerDesignName>ERD-Designed</ownerDesignName>
+<indexState>Unique Plain Index</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="2B8DF66C-6FE1-1D48-B8E7-486E74D6BD17"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="AF44490B-00F2-7D73-5DA2-D7063FB1D6F3" name="MANUFACTURER_ADDRESS_FK">
+<createdBy>azeemmumtaz</createdBy>
+<createdTime>2022-06-01 16:06:13 UTC</createdTime>
+<ownerDesignName>ERD-Designed</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="70A86D66-2531-9400-867A-6A4EA99D5BCC"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="F4B7947C-A2F6-3D2E-568C-82A9E084CD3D" name="MANUFACTURER_CONTACT_FK">
+<createdBy>azeemmumtaz</createdBy>
+<createdTime>2022-06-01 16:06:13 UTC</createdTime>
+<ownerDesignName>ERD-Designed</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="058138B0-7DCA-D4FC-F5D5-EFA0A8B871DA"/>
+</indexColumnUsage>
+</ind_PK_UK>
+</indexes>
+</Table>

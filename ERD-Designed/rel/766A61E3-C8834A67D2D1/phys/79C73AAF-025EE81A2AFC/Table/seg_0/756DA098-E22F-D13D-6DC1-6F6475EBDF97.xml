@@ -1,0 +1,50 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<TableProxyOraclev12c class="oracle.dbtools.crest.model.design.storage.oracle.v12c.TableProxyOraclev12c" name="PRODUCT_CATEGORY" directorySegmentName="seg_0" id="756DA098-E22F-D13D-6DC1-6F6475EBDF97">
+<createdBy>azeemmumtaz</createdBy>
+<createdTime>2022-06-01 16:05:59 UTC</createdTime>
+<ownerDesignName>ERD-Designed</ownerDesignName>
+<schemaObject>1285608C-874B-0095-6FAC-50A6A5AF2F05</schemaObject>
+<logging>YES</logging>
+<partitionedRowMovement>DISABLE</partitionedRowMovement>
+<segment>DB33B8D4-5D56-2942-CB42-4C76D6E64160</segment>
+<tableSpace>DAB70A09-768F-364B-D0D5-CE259F3D96B1</tableSpace>
+<temporaryChanged>false</temporaryChanged>
+<accessDriverType>oracle_loader</accessDriverType>
+<rejectLimit></rejectLimit>
+<inMemory>NO</inMemory>
+<columnProxies itemClass="oracle.dbtools.crest.model.design.storage.oracle.v12c.ColumnProxyOraclev12c">
+<ColumnProxy name="NAME" id="1E4B6CDD-B83E-122D-BAB0-4ED43DA0D38D">
+<createdBy>azeemmumtaz</createdBy>
+<createdTime>2022-06-01 16:06:04 UTC</createdTime>
+<ownerDesignName>ERD-Designed</ownerDesignName>
+</ColumnProxy>
+<ColumnProxy name="ID" id="BB1F9878-DB17-2756-F776-761AAECD3E74">
+<createdBy>azeemmumtaz</createdBy>
+<createdTime>2022-06-01 16:06:04 UTC</createdTime>
+<ownerDesignName>ERD-Designed</ownerDesignName>
+</ColumnProxy>
+</columnProxies>
+<indexProxies>
+<IndexProxy class="oracle.dbtools.crest.model.design.storage.oracle.v10g.IndexProxyOraclev10g" name="PRODUCT_CATEGORY_PK" id="920E7940-B65A-6F91-9E2F-1B7552EDE40F">
+<createdBy>azeemmumtaz</createdBy>
+<createdTime>2022-06-01 16:06:09 UTC</createdTime>
+<ownerDesignName>ERD-Designed</ownerDesignName>
+<schemaObject>1285608C-874B-0095-6FAC-50A6A5AF2F05</schemaObject>
+<segment>34C5772F-B68B-85F9-7FD1-F5E4E9B56A5A</segment>
+<tableSpace>DAB70A09-768F-364B-D0D5-CE259F3D96B1</tableSpace>
+</IndexProxy>
+</indexProxies>
+<primaryKeys>
+<PrimaryKey class="oracle.dbtools.crest.model.design.storage.oracle.v10g.PKProxyOraclev10g" name="PRODUCT_CATEGORY_PK" id="C4AC5ED5-7451-E25C-9EB4-E8DE43CE804C">
+<createdBy>azeemmumtaz</createdBy>
+<createdTime>2022-06-01 16:06:11 UTC</createdTime>
+<ownerDesignName>ERD-Designed</ownerDesignName>
+<segment>34C5772F-B68B-85F9-7FD1-F5E4E9B56A5A</segment>
+<tableSpace>DAB70A09-768F-364B-D0D5-CE259F3D96B1</tableSpace>
+<existingIndex>920E7940-B65A-6F91-9E2F-1B7552EDE40F</existingIndex>
+<indexSegment>34C5772F-B68B-85F9-7FD1-F5E4E9B56A5A</indexSegment>
+<indexSort>SORTED</indexSort>
+<usingIndex>BY INDEX NAME</usingIndex>
+</PrimaryKey>
+</primaryKeys>
+</TableProxyOraclev12c>

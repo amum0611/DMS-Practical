@@ -1,0 +1,60 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<TableProxyOraclev12c class="oracle.dbtools.crest.model.design.storage.oracle.v12c.TableProxyOraclev12c" name="LOYALTY" directorySegmentName="seg_0" id="CD4E2F1A-756F-E456-90E8-BC0C5C17ECCA">
+<createdBy>azeemmumtaz</createdBy>
+<createdTime>2022-06-01 16:06:01 UTC</createdTime>
+<ownerDesignName>ERD-Designed</ownerDesignName>
+<schemaObject>1285608C-874B-0095-6FAC-50A6A5AF2F05</schemaObject>
+<logging>YES</logging>
+<partitionedRowMovement>DISABLE</partitionedRowMovement>
+<segment>DB33B8D4-5D56-2942-CB42-4C76D6E64160</segment>
+<tableSpace>DAB70A09-768F-364B-D0D5-CE259F3D96B1</tableSpace>
+<temporaryChanged>false</temporaryChanged>
+<accessDriverType>oracle_loader</accessDriverType>
+<rejectLimit></rejectLimit>
+<inMemory>NO</inMemory>
+<columnProxies itemClass="oracle.dbtools.crest.model.design.storage.oracle.v12c.ColumnProxyOraclev12c">
+<ColumnProxy name="ISSUED_DATE" id="91806595-CAE9-DD0B-F85F-529977EDD202">
+<createdBy>azeemmumtaz</createdBy>
+<createdTime>2022-06-01 16:06:04 UTC</createdTime>
+<ownerDesignName>ERD-Designed</ownerDesignName>
+</ColumnProxy>
+<ColumnProxy name="EXPIRY_DATE" id="BB1F5B80-0E4C-7718-508C-0CF2F65F628C">
+<createdBy>azeemmumtaz</createdBy>
+<createdTime>2022-06-01 16:06:04 UTC</createdTime>
+<ownerDesignName>ERD-Designed</ownerDesignName>
+</ColumnProxy>
+<ColumnProxy name="CARD_NUMBER" id="C82703E6-9190-E2F7-D24E-C9298970DF2C">
+<createdBy>azeemmumtaz</createdBy>
+<createdTime>2022-06-01 16:06:04 UTC</createdTime>
+<ownerDesignName>ERD-Designed</ownerDesignName>
+</ColumnProxy>
+<ColumnProxy name="ID" id="DA3037BC-1F76-A74B-E2FB-30A3077B1907">
+<createdBy>azeemmumtaz</createdBy>
+<createdTime>2022-06-01 16:06:04 UTC</createdTime>
+<ownerDesignName>ERD-Designed</ownerDesignName>
+</ColumnProxy>
+</columnProxies>
+<indexProxies>
+<IndexProxy class="oracle.dbtools.crest.model.design.storage.oracle.v10g.IndexProxyOraclev10g" name="LOYALTY_PK" id="D805A0A6-3805-B3D8-3BC8-2067EC661D9A">
+<createdBy>azeemmumtaz</createdBy>
+<createdTime>2022-06-01 16:06:07 UTC</createdTime>
+<ownerDesignName>ERD-Designed</ownerDesignName>
+<schemaObject>1285608C-874B-0095-6FAC-50A6A5AF2F05</schemaObject>
+<segment>34C5772F-B68B-85F9-7FD1-F5E4E9B56A5A</segment>
+<tableSpace>DAB70A09-768F-364B-D0D5-CE259F3D96B1</tableSpace>
+</IndexProxy>
+</indexProxies>
+<primaryKeys>
+<PrimaryKey class="oracle.dbtools.crest.model.design.storage.oracle.v10g.PKProxyOraclev10g" name="LOYALTY_PK" id="ACCD31BD-AB35-38B4-4676-905E99B81B3A">
+<createdBy>azeemmumtaz</createdBy>
+<createdTime>2022-06-01 16:06:11 UTC</createdTime>
+<ownerDesignName>ERD-Designed</ownerDesignName>
+<segment>34C5772F-B68B-85F9-7FD1-F5E4E9B56A5A</segment>
+<tableSpace>DAB70A09-768F-364B-D0D5-CE259F3D96B1</tableSpace>
+<existingIndex>D805A0A6-3805-B3D8-3BC8-2067EC661D9A</existingIndex>
+<indexSegment>34C5772F-B68B-85F9-7FD1-F5E4E9B56A5A</indexSegment>
+<indexSort>SORTED</indexSort>
+<usingIndex>BY INDEX NAME</usingIndex>
+</PrimaryKey>
+</primaryKeys>
+</TableProxyOraclev12c>

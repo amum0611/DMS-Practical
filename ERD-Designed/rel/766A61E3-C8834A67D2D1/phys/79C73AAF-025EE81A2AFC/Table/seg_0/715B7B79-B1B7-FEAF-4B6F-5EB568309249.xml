@@ -1,0 +1,65 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<TableProxyOraclev12c class="oracle.dbtools.crest.model.design.storage.oracle.v12c.TableProxyOraclev12c" name="ADDRESS" directorySegmentName="seg_0" id="715B7B79-B1B7-FEAF-4B6F-5EB568309249">
+<createdBy>azeemmumtaz</createdBy>
+<createdTime>2022-06-01 16:06:03 UTC</createdTime>
+<ownerDesignName>ERD-Designed</ownerDesignName>
+<schemaObject>1285608C-874B-0095-6FAC-50A6A5AF2F05</schemaObject>
+<logging>YES</logging>
+<partitionedRowMovement>DISABLE</partitionedRowMovement>
+<segment>DB33B8D4-5D56-2942-CB42-4C76D6E64160</segment>
+<tableSpace>DAB70A09-768F-364B-D0D5-CE259F3D96B1</tableSpace>
+<temporaryChanged>false</temporaryChanged>
+<accessDriverType>oracle_loader</accessDriverType>
+<rejectLimit></rejectLimit>
+<inMemory>NO</inMemory>
+<columnProxies itemClass="oracle.dbtools.crest.model.design.storage.oracle.v12c.ColumnProxyOraclev12c">
+<ColumnProxy name="CITY" id="36A36FDA-1D78-809B-DBE2-28D59A8C2076">
+<createdBy>azeemmumtaz</createdBy>
+<createdTime>2022-06-01 16:06:04 UTC</createdTime>
+<ownerDesignName>ERD-Designed</ownerDesignName>
+</ColumnProxy>
+<ColumnProxy name="ADDRESS" id="569ECF73-1F22-A098-4267-EF4969D4E104">
+<createdBy>azeemmumtaz</createdBy>
+<createdTime>2022-06-01 16:06:04 UTC</createdTime>
+<ownerDesignName>ERD-Designed</ownerDesignName>
+</ColumnProxy>
+<ColumnProxy name="DISTRICT" id="B707A3C1-4A33-A94B-AA04-24BA480DBFE9">
+<createdBy>azeemmumtaz</createdBy>
+<createdTime>2022-06-01 16:06:04 UTC</createdTime>
+<ownerDesignName>ERD-Designed</ownerDesignName>
+</ColumnProxy>
+<ColumnProxy name="ID" id="DA0207AA-2AAE-CDDF-A4E7-A514188F7261">
+<createdBy>azeemmumtaz</createdBy>
+<createdTime>2022-06-01 16:06:04 UTC</createdTime>
+<ownerDesignName>ERD-Designed</ownerDesignName>
+</ColumnProxy>
+<ColumnProxy name="PROVINCE" id="E74CEC85-1323-C6B1-04F6-97585F082264">
+<createdBy>azeemmumtaz</createdBy>
+<createdTime>2022-06-01 16:06:04 UTC</createdTime>
+<ownerDesignName>ERD-Designed</ownerDesignName>
+</ColumnProxy>
+</columnProxies>
+<indexProxies>
+<IndexProxy class="oracle.dbtools.crest.model.design.storage.oracle.v10g.IndexProxyOraclev10g" name="ADDRESS_PK" id="1A8F9178-9CF6-20D0-A803-37B9ACCD34EF">
+<createdBy>azeemmumtaz</createdBy>
+<createdTime>2022-06-01 16:06:06 UTC</createdTime>
+<ownerDesignName>ERD-Designed</ownerDesignName>
+<schemaObject>1285608C-874B-0095-6FAC-50A6A5AF2F05</schemaObject>
+<segment>34C5772F-B68B-85F9-7FD1-F5E4E9B56A5A</segment>
+<tableSpace>DAB70A09-768F-364B-D0D5-CE259F3D96B1</tableSpace>
+</IndexProxy>
+</indexProxies>
+<primaryKeys>
+<PrimaryKey class="oracle.dbtools.crest.model.design.storage.oracle.v10g.PKProxyOraclev10g" name="ADDRESS_PK" id="5CFD37A3-E971-04EC-F908-92ED8F32F495">
+<createdBy>azeemmumtaz</createdBy>
+<createdTime>2022-06-01 16:06:11 UTC</createdTime>
+<ownerDesignName>ERD-Designed</ownerDesignName>
+<segment>34C5772F-B68B-85F9-7FD1-F5E4E9B56A5A</segment>
+<tableSpace>DAB70A09-768F-364B-D0D5-CE259F3D96B1</tableSpace>
+<existingIndex>1A8F9178-9CF6-20D0-A803-37B9ACCD34EF</existingIndex>
+<indexSegment>34C5772F-B68B-85F9-7FD1-F5E4E9B56A5A</indexSegment>
+<indexSort>SORTED</indexSort>
+<usingIndex>BY INDEX NAME</usingIndex>
+</PrimaryKey>
+</primaryKeys>
+</TableProxyOraclev12c>

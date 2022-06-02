@@ -1,0 +1,153 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Table class="oracle.dbtools.crest.model.design.relational.Table" directorySegmentName="seg_0" id="D02EDADC-76A2-DD15-BF9F-D7F2915C179C" schemaObject="1285608C-874B-0095-6FAC-50A6A5AF2F05" name="BILL">
+<sourceConnName>DMS Practical CB003033</sourceConnName>
+<sourceObjSchema>ADMIN</sourceObjSchema>
+<sourceObjName>BILL</sourceObjName>
+<createdBy>azeemmumtaz</createdBy>
+<createdTime>2022-06-01 16:06:01 UTC</createdTime>
+<ownerDesignName>ERD-Designed</ownerDesignName>
+<allowColumnReorder>false</allowColumnReorder>
+<existDependencyGenerateInDDl>true</existDependencyGenerateInDDl>
+<parsed>true</parsed>
+<columns itemClass="oracle.dbtools.crest.model.design.relational.Column">
+<Column name="ID" id="3FF5F6C6-C9B9-F671-36FE-B88AAA19462C">
+<sourceConnName>DMS Practical CB003033</sourceConnName>
+<sourceObjSchema>BILL</sourceObjSchema>
+<sourceObjName>ID</sourceObjName>
+<createdBy>azeemmumtaz</createdBy>
+<createdTime>2022-06-01 16:06:04 UTC</createdTime>
+<ownerDesignName>ERD-Designed</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>36 BYTE</dataTypeSize>
+<ownDataTypeParameters>36 BYTE,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="BILLED_DATE" id="6322C486-EEFF-5A61-2A12-326BD6E79D9D">
+<sourceConnName>DMS Practical CB003033</sourceConnName>
+<sourceObjSchema>BILL</sourceObjSchema>
+<sourceObjName>BILLED_DATE</sourceObjName>
+<createdBy>azeemmumtaz</createdBy>
+<createdTime>2022-06-01 16:06:04 UTC</createdTime>
+<ownerDesignName>ERD-Designed</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT007</logicalDatatype>
+<dataTypeSize>7</dataTypeSize>
+<ownDataTypeParameters>7,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="OUTLET_CODE" id="97A16AB5-7D0E-CA8F-9CCF-6D9CDE4EF556">
+<sourceConnName>DMS Practical CB003033</sourceConnName>
+<sourceObjSchema>BILL</sourceObjSchema>
+<sourceObjName>OUTLET_CODE</sourceObjName>
+<createdBy>azeemmumtaz</createdBy>
+<createdTime>2022-06-01 16:06:04 UTC</createdTime>
+<ownerDesignName>ERD-Designed</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>4 BYTE</dataTypeSize>
+<ownDataTypeParameters>4 BYTE,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="4FB822AF-4C42-B199-AE66-CD703DA6C84A" referredColumn="E688E52A-A270-9BF5-6BB0-19466F98C78E"/>
+</associations>
+</Column>
+<Column name="CUSTOMER_ID" id="6BD6F10C-021A-3EF3-3A9B-006D72FAEA1A">
+<sourceConnName>DMS Practical CB003033</sourceConnName>
+<sourceObjSchema>BILL</sourceObjSchema>
+<sourceObjName>CUSTOMER_ID</sourceObjName>
+<createdBy>azeemmumtaz</createdBy>
+<createdTime>2022-06-01 16:06:04 UTC</createdTime>
+<ownerDesignName>ERD-Designed</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>36 BYTE</dataTypeSize>
+<ownDataTypeParameters>36 BYTE,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="192E161E-9A2A-7CCD-840D-1FD6B6B9952C" referredColumn="A3BD99C0-0D2D-EF84-CD7E-64E539A806C8"/>
+</associations>
+</Column>
+<Column name="LOYALTY_ID" id="CBA95CFA-0DA9-E7E4-0304-BF3DA2E253DD">
+<sourceConnName>DMS Practical CB003033</sourceConnName>
+<sourceObjSchema>BILL</sourceObjSchema>
+<sourceObjName>LOYALTY_ID</sourceObjName>
+<createdBy>azeemmumtaz</createdBy>
+<createdTime>2022-06-01 16:06:04 UTC</createdTime>
+<ownerDesignName>ERD-Designed</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>36 BYTE</dataTypeSize>
+<ownDataTypeParameters>36 BYTE,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="4718AF66-C617-63AE-D342-62573E53BD03" referredColumn="DA3037BC-1F76-A74B-E2FB-30A3077B1907"/>
+</associations>
+</Column>
+</columns>
+<indexes itemClass="oracle.dbtools.crest.model.design.relational.Index">
+<ind_PK_UK id="14FBABE1-7C7A-EFBD-4A01-D3DDBAD8F7B4" name="BILL_PK">
+<sourceConnName>DMS Practical CB003033</sourceConnName>
+<sourceObjSchema>ADMIN</sourceObjSchema>
+<sourceObjName>BILL_PK</sourceObjName>
+<createdBy>azeemmumtaz</createdBy>
+<createdTime>2022-06-01 16:06:11 UTC</createdTime>
+<ownerDesignName>ERD-Designed</ownerDesignName>
+<pk>true</pk>
+<indexState>Primary Constraint</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="3FF5F6C6-C9B9-F671-36FE-B88AAA19462C"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="889B2FE6-2A52-B3AB-26E2-0C726CB769F5" schemaObject="1285608C-874B-0095-6FAC-50A6A5AF2F05" name="BILL_PK">
+<sourceConnName>DMS Practical CB003033</sourceConnName>
+<sourceObjSchema>ADMIN</sourceObjSchema>
+<sourceObjName>BILL_PK</sourceObjName>
+<createdBy>azeemmumtaz</createdBy>
+<createdTime>2022-06-01 16:06:06 UTC</createdTime>
+<ownerDesignName>ERD-Designed</ownerDesignName>
+<indexState>Unique Plain Index</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="3FF5F6C6-C9B9-F671-36FE-B88AAA19462C"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="535DE038-8481-66AA-F44C-59C9CA9DC32B" name="BILL_CUSTOMER_FK">
+<createdBy>azeemmumtaz</createdBy>
+<createdTime>2022-06-01 16:06:13 UTC</createdTime>
+<ownerDesignName>ERD-Designed</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="6BD6F10C-021A-3EF3-3A9B-006D72FAEA1A"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="1E2A8311-9E80-4B76-136B-A963E0FB412B" name="BILL_LOYALTY_FK">
+<createdBy>azeemmumtaz</createdBy>
+<createdTime>2022-06-01 16:06:13 UTC</createdTime>
+<ownerDesignName>ERD-Designed</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="CBA95CFA-0DA9-E7E4-0304-BF3DA2E253DD"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="429145E2-BF45-6239-13A0-B9BC420F2986" name="BILL_OUTLET_FK">
+<createdBy>azeemmumtaz</createdBy>
+<createdTime>2022-06-01 16:06:13 UTC</createdTime>
+<ownerDesignName>ERD-Designed</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="97A16AB5-7D0E-CA8F-9CCF-6D9CDE4EF556"/>
+</indexColumnUsage>
+</ind_PK_UK>
+</indexes>
+</Table>

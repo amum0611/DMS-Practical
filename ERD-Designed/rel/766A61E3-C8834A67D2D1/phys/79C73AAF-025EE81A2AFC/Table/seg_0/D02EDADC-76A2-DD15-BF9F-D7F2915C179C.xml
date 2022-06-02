@@ -1,0 +1,82 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<TableProxyOraclev12c class="oracle.dbtools.crest.model.design.storage.oracle.v12c.TableProxyOraclev12c" name="BILL" directorySegmentName="seg_0" id="D02EDADC-76A2-DD15-BF9F-D7F2915C179C">
+<createdBy>azeemmumtaz</createdBy>
+<createdTime>2022-06-01 16:06:01 UTC</createdTime>
+<ownerDesignName>ERD-Designed</ownerDesignName>
+<schemaObject>1285608C-874B-0095-6FAC-50A6A5AF2F05</schemaObject>
+<logging>YES</logging>
+<partitionedRowMovement>DISABLE</partitionedRowMovement>
+<segment>DB33B8D4-5D56-2942-CB42-4C76D6E64160</segment>
+<tableSpace>DAB70A09-768F-364B-D0D5-CE259F3D96B1</tableSpace>
+<temporaryChanged>false</temporaryChanged>
+<accessDriverType>oracle_loader</accessDriverType>
+<rejectLimit></rejectLimit>
+<inMemory>NO</inMemory>
+<columnProxies itemClass="oracle.dbtools.crest.model.design.storage.oracle.v12c.ColumnProxyOraclev12c">
+<ColumnProxy name="ID" id="3FF5F6C6-C9B9-F671-36FE-B88AAA19462C">
+<createdBy>azeemmumtaz</createdBy>
+<createdTime>2022-06-01 16:06:04 UTC</createdTime>
+<ownerDesignName>ERD-Designed</ownerDesignName>
+</ColumnProxy>
+<ColumnProxy name="BILLED_DATE" id="6322C486-EEFF-5A61-2A12-326BD6E79D9D">
+<createdBy>azeemmumtaz</createdBy>
+<createdTime>2022-06-01 16:06:04 UTC</createdTime>
+<ownerDesignName>ERD-Designed</ownerDesignName>
+</ColumnProxy>
+<ColumnProxy name="CUSTOMER_ID" id="6BD6F10C-021A-3EF3-3A9B-006D72FAEA1A">
+<createdBy>azeemmumtaz</createdBy>
+<createdTime>2022-06-01 16:06:04 UTC</createdTime>
+<ownerDesignName>ERD-Designed</ownerDesignName>
+</ColumnProxy>
+<ColumnProxy name="OUTLET_CODE" id="97A16AB5-7D0E-CA8F-9CCF-6D9CDE4EF556">
+<createdBy>azeemmumtaz</createdBy>
+<createdTime>2022-06-01 16:06:04 UTC</createdTime>
+<ownerDesignName>ERD-Designed</ownerDesignName>
+</ColumnProxy>
+<ColumnProxy name="LOYALTY_ID" id="CBA95CFA-0DA9-E7E4-0304-BF3DA2E253DD">
+<createdBy>azeemmumtaz</createdBy>
+<createdTime>2022-06-01 16:06:04 UTC</createdTime>
+<ownerDesignName>ERD-Designed</ownerDesignName>
+</ColumnProxy>
+</columnProxies>
+<indexProxies>
+<IndexProxy class="oracle.dbtools.crest.model.design.storage.oracle.v10g.IndexProxyOraclev10g" name="BILL_PK" id="889B2FE6-2A52-B3AB-26E2-0C726CB769F5">
+<createdBy>azeemmumtaz</createdBy>
+<createdTime>2022-06-01 16:06:06 UTC</createdTime>
+<ownerDesignName>ERD-Designed</ownerDesignName>
+<schemaObject>1285608C-874B-0095-6FAC-50A6A5AF2F05</schemaObject>
+<segment>34C5772F-B68B-85F9-7FD1-F5E4E9B56A5A</segment>
+<tableSpace>DAB70A09-768F-364B-D0D5-CE259F3D96B1</tableSpace>
+</IndexProxy>
+</indexProxies>
+<foreignKeys>
+<ForeignKey class="oracle.dbtools.crest.model.design.storage.oracle.v10g.FKProxyOraclev10g" name="BILL_LOYALTY_FK" id="1E2A8311-9E80-4B76-136B-A963E0FB412B">
+<createdBy>azeemmumtaz</createdBy>
+<createdTime>2022-06-01 16:06:13 UTC</createdTime>
+<ownerDesignName>ERD-Designed</ownerDesignName>
+</ForeignKey>
+<ForeignKey class="oracle.dbtools.crest.model.design.storage.oracle.v10g.FKProxyOraclev10g" name="BILL_OUTLET_FK" id="429145E2-BF45-6239-13A0-B9BC420F2986">
+<createdBy>azeemmumtaz</createdBy>
+<createdTime>2022-06-01 16:06:13 UTC</createdTime>
+<ownerDesignName>ERD-Designed</ownerDesignName>
+</ForeignKey>
+<ForeignKey class="oracle.dbtools.crest.model.design.storage.oracle.v10g.FKProxyOraclev10g" name="BILL_CUSTOMER_FK" id="535DE038-8481-66AA-F44C-59C9CA9DC32B">
+<createdBy>azeemmumtaz</createdBy>
+<createdTime>2022-06-01 16:06:13 UTC</createdTime>
+<ownerDesignName>ERD-Designed</ownerDesignName>
+</ForeignKey>
+</foreignKeys>
+<primaryKeys>
+<PrimaryKey class="oracle.dbtools.crest.model.design.storage.oracle.v10g.PKProxyOraclev10g" name="BILL_PK" id="14FBABE1-7C7A-EFBD-4A01-D3DDBAD8F7B4">
+<createdBy>azeemmumtaz</createdBy>
+<createdTime>2022-06-01 16:06:11 UTC</createdTime>
+<ownerDesignName>ERD-Designed</ownerDesignName>
+<segment>34C5772F-B68B-85F9-7FD1-F5E4E9B56A5A</segment>
+<tableSpace>DAB70A09-768F-364B-D0D5-CE259F3D96B1</tableSpace>
+<existingIndex>889B2FE6-2A52-B3AB-26E2-0C726CB769F5</existingIndex>
+<indexSegment>34C5772F-B68B-85F9-7FD1-F5E4E9B56A5A</indexSegment>
+<indexSort>SORTED</indexSort>
+<usingIndex>BY INDEX NAME</usingIndex>
+</PrimaryKey>
+</primaryKeys>
+</TableProxyOraclev12c>

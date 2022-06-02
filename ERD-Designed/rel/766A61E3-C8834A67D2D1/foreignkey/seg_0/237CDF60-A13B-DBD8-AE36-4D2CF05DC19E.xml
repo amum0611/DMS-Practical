@@ -1,0 +1,19 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<FKIndexAssociation class="oracle.dbtools.crest.model.design.relational.FKIndexAssociation" directorySegmentName="seg_0" id="237CDF60-A13B-DBD8-AE36-4D2CF05DC19E" containerWithKeyObject="63D038C5-5EF0-483E-EA4D-B148B0B5F8D9" localFKIndex="4C67FF1A-E922-E0CB-DC05-09BD8975395C" name="SKU_OUTLET_FK">
+<sourceConnName>DMS Practical CB003033</sourceConnName>
+<sourceObjSchema>ADMIN</sourceObjSchema>
+<sourceObjName>SKU_OUTLET_FK</sourceObjName>
+<createdBy>azeemmumtaz</createdBy>
+<createdTime>2022-06-01 16:06:13 UTC</createdTime>
+<ownerDesignName>ERD-Designed</ownerDesignName>
+<referredTableLongName>ADMIN.OUTLET</referredTableLongName>
+<deleteRule>NO ACTION</deleteRule>
+<referredTableID>F88C38A6-CDC5-1C82-040A-2AFE4302279C</referredTableID>
+<keyObject>5EE2828A-9872-338D-5319-A1C6D3FDF8AE</keyObject>
+<referredKeyID>5EE2828A-9872-338D-5319-A1C6D3FDF8AE</referredKeyID>
+<mandatory>true</mandatory>
+<refColNames>CODE</refColNames>
+<transferable>true</transferable>
+<rely>false</rely>
+<columnDependencyConstraintGenerateInDDL>true</columnDependencyConstraintGenerateInDDL>
+</FKIndexAssociation>

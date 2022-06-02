@@ -1,0 +1,19 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<FKIndexAssociation class="oracle.dbtools.crest.model.design.relational.FKIndexAssociation" directorySegmentName="seg_0" id="8A9E7D67-FCFB-D495-A420-64D26BD2ED30" containerWithKeyObject="BA346135-C5C5-2D4B-F857-5B843A00B951" localFKIndex="5CB9144D-C4BF-E94D-D630-6C25AD01399B" name="SUPPLIER_ADDRESS_FK">
+<sourceConnName>DMS Practical CB003033</sourceConnName>
+<sourceObjSchema>ADMIN</sourceObjSchema>
+<sourceObjName>SUPPLIER_ADDRESS_FK</sourceObjName>
+<createdBy>azeemmumtaz</createdBy>
+<createdTime>2022-06-01 16:06:13 UTC</createdTime>
+<ownerDesignName>ERD-Designed</ownerDesignName>
+<referredTableLongName>ADMIN.ADDRESS</referredTableLongName>
+<deleteRule>NO ACTION</deleteRule>
+<referredTableID>715B7B79-B1B7-FEAF-4B6F-5EB568309249</referredTableID>
+<keyObject>5CFD37A3-E971-04EC-F908-92ED8F32F495</keyObject>
+<referredKeyID>5CFD37A3-E971-04EC-F908-92ED8F32F495</referredKeyID>
+<mandatory>true</mandatory>
+<refColNames>ID</refColNames>
+<transferable>true</transferable>
+<rely>false</rely>
+<columnDependencyConstraintGenerateInDDL>true</columnDependencyConstraintGenerateInDDL>
+</FKIndexAssociation>

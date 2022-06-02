@@ -1,0 +1,19 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<FKIndexAssociation class="oracle.dbtools.crest.model.design.relational.FKIndexAssociation" directorySegmentName="seg_0" id="D5825395-9383-5322-CC2B-4F9ED0C5F456" containerWithKeyObject="EB8D0F7E-86FE-5AFB-6188-EE9FD02DD32D" localFKIndex="64281906-3688-FE8B-53FD-9D9EF63072D7" name="PURCHASE_HISTORY_BILL_FK">
+<sourceConnName>DMS Practical CB003033</sourceConnName>
+<sourceObjSchema>ADMIN</sourceObjSchema>
+<sourceObjName>PURCHASE_HISTORY_BILL_FK</sourceObjName>
+<createdBy>azeemmumtaz</createdBy>
+<createdTime>2022-06-01 16:06:13 UTC</createdTime>
+<ownerDesignName>ERD-Designed</ownerDesignName>
+<referredTableLongName>ADMIN.BILL</referredTableLongName>
+<deleteRule>NO ACTION</deleteRule>
+<referredTableID>D02EDADC-76A2-DD15-BF9F-D7F2915C179C</referredTableID>
+<keyObject>14FBABE1-7C7A-EFBD-4A01-D3DDBAD8F7B4</keyObject>
+<referredKeyID>14FBABE1-7C7A-EFBD-4A01-D3DDBAD8F7B4</referredKeyID>
+<mandatory>true</mandatory>
+<refColNames>ID</refColNames>
+<transferable>true</transferable>
+<rely>false</rely>
+<columnDependencyConstraintGenerateInDDL>true</columnDependencyConstraintGenerateInDDL>
+</FKIndexAssociation>

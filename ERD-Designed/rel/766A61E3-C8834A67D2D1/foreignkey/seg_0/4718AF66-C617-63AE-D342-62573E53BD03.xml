@@ -1,0 +1,19 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<FKIndexAssociation class="oracle.dbtools.crest.model.design.relational.FKIndexAssociation" directorySegmentName="seg_0" id="4718AF66-C617-63AE-D342-62573E53BD03" containerWithKeyObject="D02EDADC-76A2-DD15-BF9F-D7F2915C179C" localFKIndex="1E2A8311-9E80-4B76-136B-A963E0FB412B" name="BILL_LOYALTY_FK">
+<sourceConnName>DMS Practical CB003033</sourceConnName>
+<sourceObjSchema>ADMIN</sourceObjSchema>
+<sourceObjName>BILL_LOYALTY_FK</sourceObjName>
+<createdBy>azeemmumtaz</createdBy>
+<createdTime>2022-06-01 16:06:13 UTC</createdTime>
+<ownerDesignName>ERD-Designed</ownerDesignName>
+<referredTableLongName>ADMIN.LOYALTY</referredTableLongName>
+<deleteRule>NO ACTION</deleteRule>
+<referredTableID>CD4E2F1A-756F-E456-90E8-BC0C5C17ECCA</referredTableID>
+<keyObject>ACCD31BD-AB35-38B4-4676-905E99B81B3A</keyObject>
+<referredKeyID>ACCD31BD-AB35-38B4-4676-905E99B81B3A</referredKeyID>
+<mandatory>false</mandatory>
+<refColNames>ID</refColNames>
+<transferable>true</transferable>
+<rely>false</rely>
+<columnDependencyConstraintGenerateInDDL>true</columnDependencyConstraintGenerateInDDL>
+</FKIndexAssociation>

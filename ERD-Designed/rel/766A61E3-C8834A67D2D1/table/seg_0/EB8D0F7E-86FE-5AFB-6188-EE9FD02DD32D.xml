@@ -1,0 +1,126 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Table class="oracle.dbtools.crest.model.design.relational.Table" directorySegmentName="seg_0" id="EB8D0F7E-86FE-5AFB-6188-EE9FD02DD32D" schemaObject="1285608C-874B-0095-6FAC-50A6A5AF2F05" name="PURCHASE_HISTORY">
+<sourceConnName>DMS Practical CB003033</sourceConnName>
+<sourceObjSchema>ADMIN</sourceObjSchema>
+<sourceObjName>PURCHASE_HISTORY</sourceObjName>
+<createdBy>azeemmumtaz</createdBy>
+<createdTime>2022-06-01 16:06:02 UTC</createdTime>
+<ownerDesignName>ERD-Designed</ownerDesignName>
+<allowColumnReorder>false</allowColumnReorder>
+<existDependencyGenerateInDDl>true</existDependencyGenerateInDDl>
+<parsed>true</parsed>
+<columns itemClass="oracle.dbtools.crest.model.design.relational.Column">
+<Column name="ID" id="8D06555B-2C3F-5FD8-A556-30244845547B">
+<sourceConnName>DMS Practical CB003033</sourceConnName>
+<sourceObjSchema>PURCHASE_HISTORY</sourceObjSchema>
+<sourceObjName>ID</sourceObjName>
+<createdBy>azeemmumtaz</createdBy>
+<createdTime>2022-06-01 16:06:05 UTC</createdTime>
+<ownerDesignName>ERD-Designed</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>36 BYTE</dataTypeSize>
+<ownDataTypeParameters>36 BYTE,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="BILL_ID" id="49A4DA9D-3DCB-3B9F-8192-01D9B3CFDE38">
+<sourceConnName>DMS Practical CB003033</sourceConnName>
+<sourceObjSchema>PURCHASE_HISTORY</sourceObjSchema>
+<sourceObjName>BILL_ID</sourceObjName>
+<createdBy>azeemmumtaz</createdBy>
+<createdTime>2022-06-01 16:06:05 UTC</createdTime>
+<ownerDesignName>ERD-Designed</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>36 BYTE</dataTypeSize>
+<ownDataTypeParameters>36 BYTE,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="D5825395-9383-5322-CC2B-4F9ED0C5F456" referredColumn="3FF5F6C6-C9B9-F671-36FE-B88AAA19462C"/>
+</associations>
+</Column>
+<Column name="SKU_ID" id="A04F9C1D-1895-EF72-CAA6-7F6F0325D6BF">
+<sourceConnName>DMS Practical CB003033</sourceConnName>
+<sourceObjSchema>PURCHASE_HISTORY</sourceObjSchema>
+<sourceObjName>SKU_ID</sourceObjName>
+<createdBy>azeemmumtaz</createdBy>
+<createdTime>2022-06-01 16:06:05 UTC</createdTime>
+<ownerDesignName>ERD-Designed</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>36 BYTE</dataTypeSize>
+<ownDataTypeParameters>36 BYTE,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="293178CD-6A8E-A4E0-DBB5-4A48D85687E0" referredColumn="19D1ADFD-2902-0037-3E83-04BD6A14BFBD"/>
+</associations>
+</Column>
+<Column name="QUANTITY" id="2C19724A-AFBD-A757-86E3-2EEBE0FBF853">
+<sourceConnName>DMS Practical CB003033</sourceConnName>
+<sourceObjSchema>PURCHASE_HISTORY</sourceObjSchema>
+<sourceObjName>QUANTITY</sourceObjName>
+<createdBy>azeemmumtaz</createdBy>
+<createdTime>2022-06-01 16:06:05 UTC</createdTime>
+<ownerDesignName>ERD-Designed</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<dataTypePrecision>3</dataTypePrecision>
+<dataTypeScale>0</dataTypeScale>
+<ownDataTypeParameters>,3,0</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+</columns>
+<indexes itemClass="oracle.dbtools.crest.model.design.relational.Index">
+<ind_PK_UK id="C872CBA7-FF41-B450-B1E6-4EC904CDBFDB" name="PURCHASE_HISTORY_PK">
+<sourceConnName>DMS Practical CB003033</sourceConnName>
+<sourceObjSchema>ADMIN</sourceObjSchema>
+<sourceObjName>PURCHASE_HISTORY_PK</sourceObjName>
+<createdBy>azeemmumtaz</createdBy>
+<createdTime>2022-06-01 16:06:11 UTC</createdTime>
+<ownerDesignName>ERD-Designed</ownerDesignName>
+<pk>true</pk>
+<indexState>Primary Constraint</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="8D06555B-2C3F-5FD8-A556-30244845547B"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="18CB6EA3-F2D8-9D82-9551-DC65A5659979" schemaObject="1285608C-874B-0095-6FAC-50A6A5AF2F05" name="PURCHASE_HISTORY_PK">
+<sourceConnName>DMS Practical CB003033</sourceConnName>
+<sourceObjSchema>ADMIN</sourceObjSchema>
+<sourceObjName>PURCHASE_HISTORY_PK</sourceObjName>
+<createdBy>azeemmumtaz</createdBy>
+<createdTime>2022-06-01 16:06:09 UTC</createdTime>
+<ownerDesignName>ERD-Designed</ownerDesignName>
+<indexState>Unique Plain Index</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="8D06555B-2C3F-5FD8-A556-30244845547B"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="64281906-3688-FE8B-53FD-9D9EF63072D7" name="PURCHASE_HISTORY_BILL_FK">
+<createdBy>azeemmumtaz</createdBy>
+<createdTime>2022-06-01 16:06:13 UTC</createdTime>
+<ownerDesignName>ERD-Designed</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="49A4DA9D-3DCB-3B9F-8192-01D9B3CFDE38"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="4C9428D8-8869-CA54-A33E-DABF72CD58AE" name="PURCHASE_HISTORY_SKU_FK">
+<createdBy>azeemmumtaz</createdBy>
+<createdTime>2022-06-01 16:06:13 UTC</createdTime>
+<ownerDesignName>ERD-Designed</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="A04F9C1D-1895-EF72-CAA6-7F6F0325D6BF"/>
+</indexColumnUsage>
+</ind_PK_UK>
+</indexes>
+</Table>

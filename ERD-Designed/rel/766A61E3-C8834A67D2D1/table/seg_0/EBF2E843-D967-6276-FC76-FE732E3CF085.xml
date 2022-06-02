@@ -1,0 +1,125 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Table class="oracle.dbtools.crest.model.design.relational.Table" directorySegmentName="seg_0" id="EBF2E843-D967-6276-FC76-FE732E3CF085" schemaObject="1285608C-874B-0095-6FAC-50A6A5AF2F05" name="PURCHASE_ORDER">
+<sourceConnName>DMS Practical CB003033</sourceConnName>
+<sourceObjSchema>ADMIN</sourceObjSchema>
+<sourceObjName>PURCHASE_ORDER</sourceObjName>
+<createdBy>azeemmumtaz</createdBy>
+<createdTime>2022-06-01 16:06:03 UTC</createdTime>
+<ownerDesignName>ERD-Designed</ownerDesignName>
+<allowColumnReorder>false</allowColumnReorder>
+<existDependencyGenerateInDDl>true</existDependencyGenerateInDDl>
+<parsed>true</parsed>
+<columns itemClass="oracle.dbtools.crest.model.design.relational.Column">
+<Column name="ID" id="05E6409B-EEAC-2A99-0777-C2C020B85648">
+<sourceConnName>DMS Practical CB003033</sourceConnName>
+<sourceObjSchema>PURCHASE_ORDER</sourceObjSchema>
+<sourceObjName>ID</sourceObjName>
+<createdBy>azeemmumtaz</createdBy>
+<createdTime>2022-06-01 16:06:05 UTC</createdTime>
+<ownerDesignName>ERD-Designed</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>36 BYTE</dataTypeSize>
+<ownDataTypeParameters>36 BYTE,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="REQUESTED_DATE" id="DE2F4CA4-593D-8B88-2575-92B2D929E1E9">
+<sourceConnName>DMS Practical CB003033</sourceConnName>
+<sourceObjSchema>PURCHASE_ORDER</sourceObjSchema>
+<sourceObjName>REQUESTED_DATE</sourceObjName>
+<createdBy>azeemmumtaz</createdBy>
+<createdTime>2022-06-01 16:06:05 UTC</createdTime>
+<ownerDesignName>ERD-Designed</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT007</logicalDatatype>
+<dataTypeSize>7</dataTypeSize>
+<ownDataTypeParameters>7,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="OUTLET_CODE" id="87AD65B3-67A9-4E10-8887-1BD179408D8C">
+<sourceConnName>DMS Practical CB003033</sourceConnName>
+<sourceObjSchema>PURCHASE_ORDER</sourceObjSchema>
+<sourceObjName>OUTLET_CODE</sourceObjName>
+<createdBy>azeemmumtaz</createdBy>
+<createdTime>2022-06-01 16:06:05 UTC</createdTime>
+<ownerDesignName>ERD-Designed</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>4 BYTE</dataTypeSize>
+<ownDataTypeParameters>4 BYTE,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="FD8B7351-0E70-D473-1126-FE9DB9C8B326" referredColumn="E688E52A-A270-9BF5-6BB0-19466F98C78E"/>
+</associations>
+</Column>
+<Column name="SUPPLIER_ID" id="0FC017D1-6D05-5D01-055B-6BF8B01FFD6E">
+<sourceConnName>DMS Practical CB003033</sourceConnName>
+<sourceObjSchema>PURCHASE_ORDER</sourceObjSchema>
+<sourceObjName>SUPPLIER_ID</sourceObjName>
+<createdBy>azeemmumtaz</createdBy>
+<createdTime>2022-06-01 16:06:05 UTC</createdTime>
+<ownerDesignName>ERD-Designed</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>36 BYTE</dataTypeSize>
+<ownDataTypeParameters>36 BYTE,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="8FC77245-8B7B-BD89-4D9A-2E4CCF60E79B" referredColumn="2D93589F-8022-E1E8-D59E-DFAE20448B00"/>
+</associations>
+</Column>
+</columns>
+<indexes itemClass="oracle.dbtools.crest.model.design.relational.Index">
+<ind_PK_UK id="2A3BBC0A-B3F6-5569-69FE-45D381D988D8" name="PO_PK">
+<sourceConnName>DMS Practical CB003033</sourceConnName>
+<sourceObjSchema>ADMIN</sourceObjSchema>
+<sourceObjName>PO_PK</sourceObjName>
+<createdBy>azeemmumtaz</createdBy>
+<createdTime>2022-06-01 16:06:11 UTC</createdTime>
+<ownerDesignName>ERD-Designed</ownerDesignName>
+<pk>true</pk>
+<indexState>Primary Constraint</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="05E6409B-EEAC-2A99-0777-C2C020B85648"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="A26DE3BF-B9B4-9BEA-4279-F83448AF311D" schemaObject="1285608C-874B-0095-6FAC-50A6A5AF2F05" name="PO_PK">
+<sourceConnName>DMS Practical CB003033</sourceConnName>
+<sourceObjSchema>ADMIN</sourceObjSchema>
+<sourceObjName>PO_PK</sourceObjName>
+<createdBy>azeemmumtaz</createdBy>
+<createdTime>2022-06-01 16:06:09 UTC</createdTime>
+<ownerDesignName>ERD-Designed</ownerDesignName>
+<indexState>Unique Plain Index</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="05E6409B-EEAC-2A99-0777-C2C020B85648"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="16D09D90-B3DB-41DC-0262-984393F674C3" name="PO_OUTLET_FK">
+<createdBy>azeemmumtaz</createdBy>
+<createdTime>2022-06-01 16:06:13 UTC</createdTime>
+<ownerDesignName>ERD-Designed</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="87AD65B3-67A9-4E10-8887-1BD179408D8C"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="5EE98570-D467-EFE9-B5B0-6941A4C8B871" name="PO_SUPPLIER_FK">
+<createdBy>azeemmumtaz</createdBy>
+<createdTime>2022-06-01 16:06:13 UTC</createdTime>
+<ownerDesignName>ERD-Designed</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="0FC017D1-6D05-5D01-055B-6BF8B01FFD6E"/>
+</indexColumnUsage>
+</ind_PK_UK>
+</indexes>
+</Table>
