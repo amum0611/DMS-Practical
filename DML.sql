@@ -12,7 +12,7 @@ INSERT INTO address (id, address, city, district, province)
 VALUES ('2b578805-b8ae-42ac-b22f-155636709068', '12A, Amber Road', 'Pasikuda', 'Trincomalee', 'Eastern');
 
 INSERT INTO address (id, address, city, district, province) 
-VALUES ('b6727366-d966-4a8a-ab59-6131cd7c313c', '87/12A, John Road', 'Point Pedro', 'Jaffna', 'Northern');
+VALUES ('b6727366-d966-4a8a-ab59-6131cd7c313c', '87/12A, John Road', 'Kollupitiya', 'Colombo', 'Western');
 
 INSERT INTO address (id, address, city, district, province) 
 VALUES ('9bdcf6c5-41fa-4342-8fc9-2f0b6cc487b8', '1, Captain Road', 'Galle Fort', 'Galle', 'Southern');
@@ -232,4 +232,165 @@ VALUES ('1b05f452-2f5b-4111-9db0-f64116fe0a36', 'Pizza Dough', '5c30ed44-c8a8-40
 
 COMMIT;
 
+-- Insert Batches
+
+SET TRANSACTION READ WRITE;
+
+INSERT INTO batch (id, product_id, manufacturer_date, expiration_date)
+VALUES ('106e8ae4-4c2a-4b41-a18e-4460bb3092d9', '1a05f452-2f5b-4111-9db0-f64116fe0a36', TO_DATE('2021-12-16', 'yyyy-MM-dd'), TO_DATE('2022-12-16', 'yyyy-MM-dd'));
+
+INSERT INTO batch (id, product_id, manufacturer_date, expiration_date)
+VALUES ('116e8ae4-4c2a-4b41-a18e-4460bb3092d9', '2a05f452-2f5b-4111-9db0-f64116fe0a36', TO_DATE('2021-05-16', 'yyyy-MM-dd'), TO_DATE('2022-05-16', 'yyyy-MM-dd'));
+
+INSERT INTO batch (id, product_id, manufacturer_date, expiration_date)
+VALUES ('126e8ae4-4c2a-4b41-a18e-4460bb3092d9', '3a05f452-2f5b-4111-9db0-f64116fe0a36', TO_DATE('2021-03-02', 'yyyy-MM-dd'), TO_DATE('2022-08-16', 'yyyy-MM-dd'));
+
+INSERT INTO batch (id, product_id, manufacturer_date, expiration_date)
+VALUES ('136e8ae4-4c2a-4b41-a18e-4460bb3092d9', '4a05f452-2f5b-4111-9db0-f64116fe0a36', TO_DATE('2022-01-01', 'yyyy-MM-dd'), TO_DATE('2022-10-06', 'yyyy-MM-dd'));
+
+INSERT INTO batch (id, product_id, manufacturer_date, expiration_date)
+VALUES ('146e8ae4-4c2a-4b41-a18e-4460bb3092d9', '5a05f452-2f5b-4111-9db0-f64116fe0a36', TO_DATE('2022-01-16', 'yyyy-MM-dd'), TO_DATE('2022-12-16', 'yyyy-MM-dd'));
+
+INSERT INTO batch (id, product_id, manufacturer_date, expiration_date)
+VALUES ('156e8ae4-4c2a-4b41-a18e-4460bb3092d9', '6a05f452-2f5b-4111-9db0-f64116fe0a36', TO_DATE('2021-02-16', 'yyyy-MM-dd'), TO_DATE('2023-12-16', 'yyyy-MM-dd'));
+
+INSERT INTO batch (id, product_id, manufacturer_date, expiration_date)
+VALUES ('166e8ae4-4c2a-4b41-a18e-4460bb3092d9', '7a05f452-2f5b-4111-9db0-f64116fe0a36', TO_DATE('2022-12-31', 'yyyy-MM-dd'), TO_DATE('2022-09-03', 'yyyy-MM-dd'));
+
+INSERT INTO batch (id, product_id, manufacturer_date, expiration_date)
+VALUES ('176e8ae4-4c2a-4b41-a18e-4460bb3092d9', '8a05f452-2f5b-4111-9db0-f64116fe0a36', TO_DATE('2022-05-16', 'yyyy-MM-dd'), TO_DATE('2022-07-16', 'yyyy-MM-dd'));
+
+INSERT INTO batch (id, product_id, manufacturer_date, expiration_date)
+VALUES ('186e8ae4-4c2a-4b41-a18e-4460bb3092d9', '9a05f452-2f5b-4111-9db0-f64116fe0a36', TO_DATE('2022-04-16', 'yyyy-MM-dd'), TO_DATE('2024-12-16', 'yyyy-MM-dd'));
+
+INSERT INTO batch (id, product_id, manufacturer_date, expiration_date)
+VALUES ('196e8ae4-4c2a-4b41-a18e-4460bb3092d9', '1b05f452-2f5b-4111-9db0-f64116fe0a36', TO_DATE('2022-06-01', 'yyyy-MM-dd'), TO_DATE('2022-12-01', 'yyyy-MM-dd'));
+
+COMMIT;
+
+-- Insert SKU
+
+SET TRANSACTION READ WRITE;
+
+INSERT INTO sku (id, batch_id, product_id, outlet_code)
+VALUES ('3f0d5ea6-2546-4aa8-bd97-f47522429b53', '106e8ae4-4c2a-4b41-a18e-4460bb3092d9', '1a05f452-2f5b-4111-9db0-f64116fe0a36', '0000');
+
+INSERT INTO sku (id, batch_id, product_id, outlet_code)
+VALUES ('4f0d5ea6-2546-4aa8-bd97-f47522429b53', '116e8ae4-4c2a-4b41-a18e-4460bb3092d9', '2a05f452-2f5b-4111-9db0-f64116fe0a36', '0002');
+
+INSERT INTO sku (id, batch_id, product_id, outlet_code)
+VALUES ('5f0d5ea6-2546-4aa8-bd97-f47522429b53', '126e8ae4-4c2a-4b41-a18e-4460bb3092d9', '3a05f452-2f5b-4111-9db0-f64116fe0a36', '0003');
+
+INSERT INTO sku (id, batch_id, product_id, outlet_code)
+VALUES ('6f0d5ea6-2546-4aa8-bd97-f47522429b53', '136e8ae4-4c2a-4b41-a18e-4460bb3092d9', '4a05f452-2f5b-4111-9db0-f64116fe0a36', '0004');
+
+INSERT INTO sku (id, batch_id, product_id, outlet_code)
+VALUES ('7f0d5ea6-2546-4aa8-bd97-f47522429b53', '146e8ae4-4c2a-4b41-a18e-4460bb3092d9', '5a05f452-2f5b-4111-9db0-f64116fe0a36', '0005');
+
+INSERT INTO sku (id, batch_id, product_id, outlet_code)
+VALUES ('8f0d5ea6-2546-4aa8-bd97-f47522429b53', '156e8ae4-4c2a-4b41-a18e-4460bb3092d9', '6a05f452-2f5b-4111-9db0-f64116fe0a36', '0006');
+
+INSERT INTO sku (id, batch_id, product_id, outlet_code)
+VALUES ('9f0d5ea6-2546-4aa8-bd97-f47522429b53', '166e8ae4-4c2a-4b41-a18e-4460bb3092d9', '7a05f452-2f5b-4111-9db0-f64116fe0a36', '0007');
+
+INSERT INTO sku (id, batch_id, product_id, outlet_code)
+VALUES ('1g0d5ea6-2546-4aa8-bd97-f47522429b53', '176e8ae4-4c2a-4b41-a18e-4460bb3092d9', '8a05f452-2f5b-4111-9db0-f64116fe0a36', '0008');
+
+INSERT INTO sku (id, batch_id, product_id, outlet_code)
+VALUES ('2g0d5ea6-2546-4aa8-bd97-f47522429b53', '186e8ae4-4c2a-4b41-a18e-4460bb3092d9', '9a05f452-2f5b-4111-9db0-f64116fe0a36', '0000');
+
+INSERT INTO sku (id, batch_id, product_id, outlet_code)
+VALUES ('3g0d5ea6-2546-4aa8-bd97-f47522429b53', '196e8ae4-4c2a-4b41-a18e-4460bb3092d9', '1b05f452-2f5b-4111-9db0-f64116fe0a36', '0000');
+
+INSERT INTO sku (id, batch_id, product_id, outlet_code)
+VALUES ('42c8baeb-f220-4e79-b460-b2b77566e036', '106e8ae4-4c2a-4b41-a18e-4460bb3092d9', '1a05f452-2f5b-4111-9db0-f64116fe0a36', '0002');
+
+INSERT INTO sku (id, batch_id, product_id, outlet_code)
+VALUES ('43c8baeb-f220-4e79-b460-b2b77566e036', '116e8ae4-4c2a-4b41-a18e-4460bb3092d9', '2a05f452-2f5b-4111-9db0-f64116fe0a36', '0002');
+
+INSERT INTO sku (id, batch_id, product_id, outlet_code)
+VALUES ('44c8baeb-f220-4e79-b460-b2b77566e036', '126e8ae4-4c2a-4b41-a18e-4460bb3092d9', '3a05f452-2f5b-4111-9db0-f64116fe0a36', '0002');
+
+INSERT INTO sku (id, batch_id, product_id, outlet_code)
+VALUES ('45c8baeb-f220-4e79-b460-b2b77566e036', '136e8ae4-4c2a-4b41-a18e-4460bb3092d9', '4a05f452-2f5b-4111-9db0-f64116fe0a36', '0002');
+
+INSERT INTO sku (id, batch_id, product_id, outlet_code)
+VALUES ('46c8baeb-f220-4e79-b460-b2b77566e036', '146e8ae4-4c2a-4b41-a18e-4460bb3092d9', '5a05f452-2f5b-4111-9db0-f64116fe0a36', '0002');
+
+INSERT INTO sku (id, batch_id, product_id, outlet_code)
+VALUES ('47c8baeb-f220-4e79-b460-b2b77566e036', '156e8ae4-4c2a-4b41-a18e-4460bb3092d9', '6a05f452-2f5b-4111-9db0-f64116fe0a36', '0002');
+
+INSERT INTO sku (id, batch_id, product_id, outlet_code)
+VALUES ('48c8baeb-f220-4e79-b460-b2b77566e036', '166e8ae4-4c2a-4b41-a18e-4460bb3092d9', '7a05f452-2f5b-4111-9db0-f64116fe0a36', '0002');
+
+INSERT INTO sku (id, batch_id, product_id, outlet_code)
+VALUES ('49c8baeb-f220-4e79-b460-b2b77566e036', '176e8ae4-4c2a-4b41-a18e-4460bb3092d9', '8a05f452-2f5b-4111-9db0-f64116fe0a36', '0002');
+
+INSERT INTO sku (id, batch_id, product_id, outlet_code)
+VALUES ('50c8baeb-f220-4e79-b460-b2b77566e036', '186e8ae4-4c2a-4b41-a18e-4460bb3092d9', '9a05f452-2f5b-4111-9db0-f64116fe0a36', '0002');
+
+COMMIT;
+
+-- Insert Custome
+
+SET TRANSACTION READ WRITE;
+
+INSERT INTO customer (id, first_name, last_name, date_of_birth, nic, gender, contact_id)
+VALUES ('586fe87a-6862-46f3-a4d1-65d00bf0985c', 'John', 'Cena', TO_DATE('1988-06-01', 'yyyy-MM-dd'), '886565623v', 'male', '7fd4758d-c787-422f-a692-c9532c33bcaf');
+
+INSERT INTO customer (id, first_name, last_name, date_of_birth, nic, gender, contact_id)
+VALUES ('596fe87a-6862-46f3-a4d1-65d00bf0985c', 'Sumana', 'Wathi', TO_DATE('1988-06-01', 'yyyy-MM-dd'), '762837263v', 'female', '4f48b392-3a34-4cb5-b708-630628aae6f7');
+
+INSERT INTO customer (id, first_name, last_name, date_of_birth, nic, gender, contact_id)
+VALUES ('606fe87a-6862-46f3-a4d1-65d00bf0985c', 'Mark', 'Zuckerbuger', TO_DATE('1990-06-01', 'yyyy-MM-dd'), '526374627v', 'male', '37c49c3f-adcd-4f9d-b03d-6052777012bf');
+
+INSERT INTO customer (id, first_name, last_name, date_of_birth, nic, gender, contact_id)
+VALUES ('616fe87a-6862-46f3-a4d1-65d00bf0985c', 'Peter', 'Perera', TO_DATE('2001-06-01', 'yyyy-MM-dd'), '767665654v', 'other', '7bfb8228-16fc-4840-9d22-4e4fd8a6016c');
+
+INSERT INTO customer (id, first_name, last_name, date_of_birth, nic, gender, contact_id)
+VALUES ('626fe87a-6862-46f3-a4d1-65d00bf0985c', 'Nuwanthi', 'Athukolara', TO_DATE('1960-06-01', 'yyyy-MM-dd'), '987654323v', 'female', '7bfb8228-16fc-4840-9d22-4e4fd8a6016c');
+
+INSERT INTO customer (id, first_name, last_name, date_of_birth, nic, gender, contact_id)
+VALUES ('636fe87a-6862-46f3-a4d1-65d00bf0985c', 'Salim', 'Akthab', TO_DATE('1975-06-01', 'yyyy-MM-dd'), '873645253v', 'male', '634286c3-e94c-4f1c-a7e5-de1da504bdf9');
+
+INSERT INTO customer (id, first_name, last_name, date_of_birth, nic, gender, contact_id)
+VALUES ('646fe87a-6862-46f3-a4d1-65d00bf0985c', 'Zaitoon', 'Ismail', TO_DATE('1994-06-01', 'yyyy-MM-dd'), '980927354v', 'female', '7efb76f3-011f-41fa-8776-21217a5c805c');
+
+INSERT INTO customer (id, first_name, last_name, date_of_birth, nic, gender, contact_id)
+VALUES ('656fe87a-6862-46f3-a4d1-65d00bf0985c', 'Salman', 'Kanna', TO_DATE('1923-06-01', 'yyyy-MM-dd'), '097617283v', 'male', '4c4a5fc8-05e4-4a61-8c71-19534a3070e0');
+
+INSERT INTO customer (id, first_name, last_name, date_of_birth, nic, gender, contact_id)
+VALUES ('666fe87a-6862-46f3-a4d1-65d00bf0985c', 'Amithab', 'Perera', TO_DATE('1922-06-01', 'yyyy-MM-dd'), '564738276v', 'male', '0804a65e-7899-4806-863b-79ab7f122901');
+
+INSERT INTO customer (id, first_name, last_name, date_of_birth, nic, gender, contact_id)
+VALUES ('676fe87a-6862-46f3-a4d1-65d00bf0985c', 'Abishek', 'Aarachchi', TO_DATE('2002-06-01', 'yyyy-MM-dd'), '888738276v', 'other', '3dc65c13-200f-44db-9af1-6bacf5729508');
+
+COMMIT;
+
+-- Insert Loyalty
+
+SET TRANSACTION READ WRITE;
+
+INSERT INTO loyalty (id, card_number, issued_date, expiry_date, customer_id)
+VALUES ('67ade1c1-452e-4b49-8a02-ca73c3443604', '8722837777722929', TO_DATE('2021-12-16', 'yyyy-MM-dd'), TO_DATE('2022-12-16', 'yyyy-MM-dd'), '586fe87a-6862-46f3-a4d1-65d00bf0985c');
+
+INSERT INTO loyalty (id, card_number, issued_date, expiry_date, customer_id)
+VALUES ('68ade1c1-452e-4b49-8a02-ca73c3443604', '1234433254326543', TO_DATE('2021-05-16', 'yyyy-MM-dd'), TO_DATE('2022-05-16', 'yyyy-MM-dd'), '596fe87a-6862-46f3-a4d1-65d00bf0985c');
+
+INSERT INTO loyalty (id, card_number, issued_date, expiry_date, customer_id)
+VALUES ('69ade1c1-452e-4b49-8a02-ca73c3443604', '1234567890987659', TO_DATE('2021-03-02', 'yyyy-MM-dd'), TO_DATE('2022-08-16', 'yyyy-MM-dd'), '606fe87a-6862-46f3-a4d1-65d00bf0985c');
+
+INSERT INTO loyalty (id, card_number, issued_date, expiry_date, customer_id)
+VALUES ('70ade1c1-452e-4b49-8a02-ca73c3443604', '6655776655445566', TO_DATE('2022-01-01', 'yyyy-MM-dd'), TO_DATE('2022-10-06', 'yyyy-MM-dd'), '616fe87a-6862-46f3-a4d1-65d00bf0985c');
+
+INSERT INTO loyalty (id, card_number, issued_date, expiry_date, customer_id)
+VALUES ('71ade1c1-452e-4b49-8a02-ca73c3443604', '1122332211223344', TO_DATE('2022-01-16', 'yyyy-MM-dd'), TO_DATE('2022-12-16', 'yyyy-MM-dd'), '626fe87a-6862-46f3-a4d1-65d00bf0985c');
+
+INSERT INTO loyalty (id, card_number, issued_date, expiry_date, customer_id)
+VALUES ('72ade1c1-452e-4b49-8a02-ca73c3443604', '1234567890123456', TO_DATE('2021-02-16', 'yyyy-MM-dd'), TO_DATE('2023-12-16', 'yyyy-MM-dd'), '636fe87a-6862-46f3-a4d1-65d00bf0985c');
+
+INSERT INTO loyalty (id, card_number, issued_date, expiry_date, customer_id)
+VALUES ('73ade1c1-452e-4b49-8a02-ca73c3443604', '4455623446889009', TO_DATE('2022-12-31', 'yyyy-MM-dd'), TO_DATE('2022-09-03', 'yyyy-MM-dd'), '646fe87a-6862-46f3-a4d1-65d00bf0985c');
+
+COMMIT;
 
