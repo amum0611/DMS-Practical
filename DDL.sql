@@ -9,6 +9,7 @@ CREATE TABLE address (
     CONSTRAINT  address_pk  PRIMARY KEY (id)
 );
 
+
 CREATE TABLE contact (
     id              VARCHAR2 (36) NOT NULL,
     phone_number    VARCHAR2 (10) NOT NULL,
