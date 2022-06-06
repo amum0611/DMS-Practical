@@ -394,3 +394,51 @@ VALUES ('73ade1c1-452e-4b49-8a02-ca73c3443604', '4455623446889009', TO_DATE('202
 
 COMMIT;
 
+-- Insert Bill (for customers with Loyalty)
+
+DECLARE
+  var_billed_date bill.billed_date%TYPE;
+  var_outlet_code outlet.code%TYPE;
+  var_customer_id customer.id%TYPE;
+  var_loyalty_id loyalty.id%TYPE;
+  var_total bill.sub_total%TYPE;
+  var_discount bill.discount%TYPE;
+  
+BEGIN
+FOR var_counter IN 1..10000 LOOP
+
+    SELECT TO_CHAR(TO_DATE(TRUNC(DBMS_RANDOM.VALUE(TO_CHAR(DATE '2019-01-01','J') ,TO_CHAR(DATE '2022-05-31','J'))), 'J'), 'yyyy-MM-dd') INTO var_billed_date FROM DUAL;
+    SELECT code INTO var_outlet_code FROM (SELECT code FROM outlet ORDER BY dbms_random.value ) WHERE rownum = 1;
+    SELECT customer_id, id INTO var_customer_id, var_loyalty_id FROM (SELECT customer_id, id FROM loyalty ORDER BY dbms_random.value ) WHERE rownum = 1;
+    SELECT trunc(dbms_random.value(10, 99), 2) INTO var_total FROM dual;
+    SELECT trunc(dbms_random.value(0, 5), 2) INTO var_discount FROM dual;
+
+    INSERT INTO bill (billed_date, outlet_code, customer_id, loyalty_id, sub_total, discount) 
+    VALUES (var_billed_date, var_outlet_code, var_customer_id, var_loyalty_id, var_total, var_discount);
+
+END LOOP;
+COMMIT;
+END;
+
+-- Insert Bill (for customers without Loyalty)
+DECLARE
+  var_billed_date bill.billed_date%TYPE;
+  var_outlet_code outlet.code%TYPE;
+  var_customer_id customer.id%TYPE;
+  var_total bill.sub_total%TYPE;
+  
+BEGIN
+FOR var_counter IN 1..100 LOOP
+
+    SELECT TO_CHAR(TO_DATE(TRUNC(DBMS_RANDOM.VALUE(TO_CHAR(DATE '2019-01-01','J') ,TO_CHAR(DATE '2022-05-31','J'))), 'J'), 'yyyy-MM-dd') INTO var_billed_date FROM DUAL;
+    SELECT code INTO var_outlet_code FROM (SELECT code FROM outlet ORDER BY dbms_random.value ) WHERE rownum = 1;
+    SELECT id INTO var_customer_id FROM (SELECT c.id as id FROM customer c LEFT JOIN loyalty l ON c.id = l.customer_id WHERE l.id is null ORDER BY dbms_random.value) WHERE rownum = 1;
+    SELECT trunc(dbms_random.value(10, 99), 2) INTO var_total FROM dual;
+
+    INSERT INTO bill (billed_date, outlet_code, customer_id, sub_total, discount) 
+    VALUES (var_billed_date, var_outlet_code, var_customer_id, var_total, 0);
+
+END LOOP;
+COMMIT;
+END;
+
