@@ -329,6 +329,31 @@ VALUES ('49c8baeb-f220-4e79-b460-b2b77566e036', '176e8ae4-4c2a-4b41-a18e-4460bb3
 INSERT INTO sku (id, batch_id, product_id, outlet_code)
 VALUES ('50c8baeb-f220-4e79-b460-b2b77566e036', '186e8ae4-4c2a-4b41-a18e-4460bb3092d9', '9a05f452-2f5b-4111-9db0-f64116fe0a36', '0002');
 
+INSERT INTO sku (id, batch_id, product_id, outlet_code)
+VALUES ('51c8baeb-f220-4e79-b460-b2b77566e036', '186e8ae4-4c2a-4b41-a18e-4460bb3092d9', '9a05f452-2f5b-4111-9db0-f64116fe0a36', '0001');
+
+INSERT INTO sku (id, batch_id, product_id, outlet_code)
+VALUES ('52c8baeb-f220-4e79-b460-b2b77566e036', '186e8ae4-4c2a-4b41-a18e-4460bb3092d9', '9a05f452-2f5b-4111-9db0-f64116fe0a36', '0003');
+
+INSERT INTO sku (id, batch_id, product_id, outlet_code)
+VALUES ('53c8baeb-f220-4e79-b460-b2b77566e036', '186e8ae4-4c2a-4b41-a18e-4460bb3092d9', '9a05f452-2f5b-4111-9db0-f64116fe0a36', '0004');
+
+INSERT INTO sku (id, batch_id, product_id, outlet_code)
+VALUES ('54c8baeb-f220-4e79-b460-b2b77566e036', '186e8ae4-4c2a-4b41-a18e-4460bb3092d9', '9a05f452-2f5b-4111-9db0-f64116fe0a36', '0005');
+
+INSERT INTO sku (id, batch_id, product_id, outlet_code)
+VALUES ('55c8baeb-f220-4e79-b460-b2b77566e036', '186e8ae4-4c2a-4b41-a18e-4460bb3092d9', '9a05f452-2f5b-4111-9db0-f64116fe0a36', '0006');
+
+INSERT INTO sku (id, batch_id, product_id, outlet_code)
+VALUES ('56c8baeb-f220-4e79-b460-b2b77566e036', '186e8ae4-4c2a-4b41-a18e-4460bb3092d9', '9a05f452-2f5b-4111-9db0-f64116fe0a36', '0007');
+
+INSERT INTO sku (id, batch_id, product_id, outlet_code)
+VALUES ('57c8baeb-f220-4e79-b460-b2b77566e036', '186e8ae4-4c2a-4b41-a18e-4460bb3092d9', '9a05f452-2f5b-4111-9db0-f64116fe0a36', '0008');
+
+INSERT INTO sku (id, batch_id, product_id, outlet_code)
+VALUES ('58c8baeb-f220-4e79-b460-b2b77566e036', '186e8ae4-4c2a-4b41-a18e-4460bb3092d9', '9a05f452-2f5b-4111-9db0-f64116fe0a36', '0000');
+
+
 COMMIT;
 
 -- Insert Custome
@@ -441,4 +466,68 @@ FOR var_counter IN 1..100 LOOP
 END LOOP;
 COMMIT;
 END;
+
+-- Insert Purchase History 
+
+CREATE TABLE purchase_history (
+    id                      VARCHAR2 (36) NOT NULL,
+    bill_id                 NUMBER NOT NULL,
+    sku_id                  VARCHAR2 (36) NOT NULL,
+    quantity                NUMBER(3) NOT NULL,
+    unit_price              NUMBER (9, 2) NOT NULL,
+    
+    CONSTRAINT  purchase_history_pk         PRIMARY KEY (id),
+    CONSTRAINT  purchase_history_sku_fk     FOREIGN KEY (sku_id) REFERENCES sku(id),
+    CONSTRAINT  purchase_history_bill_fk    FOREIGN KEY (bill_id) REFERENCES bill(id)
+);
+
+select count(*) from bill; -- 10201
+
+DECLARE
+
+  var_number_of_bills bill.id%TYPE;
+  var_outlet_code bill.outlet_code%TYPE;
+  var_ph_id purchase_history.id%TYPE;
+  var_sku sku.id%TYPE;
+  var_number_of_sku bill.id%TYPE;
+  var_number_items_in_ph bill.id%TYPE;
+  var_qty purchase_history.quantity%TYPE;
+  var_unit_price purchase_history.unit_price%TYPE;
+
+BEGIN
+
+SELECT count(*) INTO var_number_of_bills FROM bill;
+
+FOR var_counter IN 1..var_number_of_bills LOOP
+
+    SELECT outlet_code INTO var_outlet_code FROM bill WHERE id = var_counter;
+    SELECT COUNT(*) INTO var_number_of_sku from SKU where outlet_code = outlet_code;
+    SELECT trunc(dbms_random.value(1, var_number_of_sku), 0) INTO var_number_items_in_ph FROM dual;
+
+    FOR var_counter IN 1..var_number_items_in_ph LOOP
+        SELECT SYS_GUID() INTO var_ph_id from dual;
+        SELECT id INTO var_sku FROM (SELECT id FROM sku WHERE outlet_code = outlet_code ORDER BY dbms_random.value ) WHERE rownum = 1;
+        SELECT trunc(dbms_random.value(10, 40), 2) INTO var_unit_price FROM dual;
+        SELECT trunc(dbms_random.value(1, 21), 0) INTO var_qty FROM dual;
+        
+        INSERT INTO purchase_history (id, bill_id, sku_id, quantity, unit_price)
+        VALUES (var_ph_id, var_counter, var_sku, var_qty, var_unit_price);
+    
+    END LOOP;
+
+END LOOP;
+COMMIT;
+END;
+
+-- Insert Supplier
+
+SET TRANSACTION READ WRITE;
+
+INSERT INTO supplier (id, name, address_id, contact_id)
+VALUES ('8c334d70-5fb7-4308-bbf5-8041bf0b505d', 'All Foods Incorporation' ,'96c51ad1-8f9d-4c0c-81a2-a513fc019f14', '3fdbd1d2-7b49-49db-9c1a-5b8db3ccbcb9');
+
+INSERT INTO supplier (id, name, address_id, contact_id)
+VALUES ('9c334d70-5fb7-4308-bbf5-8041bf0b505d', 'World Wide Supplier', '17d68fa6-f5bf-4e46-91b0-3a914afca02e', '7baf0de4-52d0-470d-882b-7026c444edc0');
+
+COMMIT;
 
