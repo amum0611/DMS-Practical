@@ -469,18 +469,6 @@ END;
 
 -- Insert Purchase History 
 
-CREATE TABLE purchase_history (
-    id                      VARCHAR2 (36) NOT NULL,
-    bill_id                 NUMBER NOT NULL,
-    sku_id                  VARCHAR2 (36) NOT NULL,
-    quantity                NUMBER(3) NOT NULL,
-    unit_price              NUMBER (9, 2) NOT NULL,
-    
-    CONSTRAINT  purchase_history_pk         PRIMARY KEY (id),
-    CONSTRAINT  purchase_history_sku_fk     FOREIGN KEY (sku_id) REFERENCES sku(id),
-    CONSTRAINT  purchase_history_bill_fk    FOREIGN KEY (bill_id) REFERENCES bill(id)
-);
-
 select count(*) from bill; -- 10201
 
 DECLARE

@@ -56,4 +56,27 @@ WHERE rownum <= 3;
 -- e.	Write a query that shows the total number of a times a product has been sold over a year, 
 --      add a column that compares it to the average number of times a product has been sold.
 
+SELECT s.product_id, to_char(b.billed_date, 'YYYY') as Year, count(s.product_id) as TotalNumberOfTimePerYear, a.AvgNumberOfTime
+FROM bill b
+INNER JOIN purchase_history ph
+ON ph.bill_id = b.id
+INNER JOIN sku s
+ON s.id = ph.sku_id
+INNER JOIN (
+    SELECT product_id, round(avg(TotalNumberOfTime), 2) AS AvgNumberOfTime
+    FROM (
+        SELECT s.product_id, to_char(b.billed_date, 'YYYY') as Year, count(s.product_id) as TotalNumberOfTime
+        FROM bill b
+        INNER JOIN purchase_history ph
+        ON ph.bill_id = b.id
+        INNER JOIN sku s
+        ON s.id = ph.sku_id
+        GROUP BY s.product_id, to_char(b.billed_date, 'YYYY')
+    )
+    GROUP BY product_id
+) a
+ON s.product_id = a.product_id
+GROUP BY s.product_id, to_char(b.billed_date, 'YYYY'), a.AvgNumberOfTime
+ORDER BY s.product_id;
+
 
