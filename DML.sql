@@ -519,3 +519,45 @@ VALUES ('9c334d70-5fb7-4308-bbf5-8041bf0b505d', 'World Wide Supplier', '17d68fa6
 
 COMMIT;
 
+-- Insert PO
+
+DECLARE
+  var_requested_date purchase_order.requested_date%TYPE;
+  var_outlet_code outlet.code%TYPE;
+  var_supplier_id supplier.id%TYPE;
+  var_id purchase_order.id%TYPE;
+  var_id_sku purchase_order.id%TYPE;
+  var_sku purchase_order.id%TYPE;
+  var_number_of_sku bill.id%TYPE;
+  var_number_items_in_po bill.id%TYPE;
+  var_qty purchase_history.quantity%TYPE;
+  
+BEGIN
+FOR var_counter IN 1..5 LOOP
+
+    SELECT TO_CHAR(TO_DATE(TRUNC(DBMS_RANDOM.VALUE(TO_CHAR(DATE '2022-01-01','J') ,TO_CHAR(DATE '2022-05-31','J'))), 'J'), 'yyyy-MM-dd') INTO var_requested_date FROM DUAL;
+    SELECT code INTO var_outlet_code FROM (SELECT code FROM outlet ORDER BY dbms_random.value ) WHERE rownum = 1;
+    SELECT id INTO var_supplier_id FROM (SELECT s.id as id FROM supplier s ORDER BY dbms_random.value) WHERE rownum = 1;
+    SELECT SYS_GUID() INTO var_id from dual;
+    
+    SELECT COUNT(*) INTO var_number_of_sku from SKU where outlet_code = var_outlet_code;
+    SELECT trunc(dbms_random.value(1, var_number_of_sku), 0) INTO var_number_items_in_po FROM dual;
+
+
+    INSERT INTO purchase_order (id, requested_date, outlet_code, supplier_id) 
+    VALUES (var_id, var_requested_date, var_outlet_code, var_supplier_id);
+    
+    FOR var_counter IN 1..var_number_items_in_po LOOP
+        SELECT SYS_GUID() INTO var_id_sku from dual;
+        SELECT id INTO var_sku FROM (SELECT id FROM sku WHERE outlet_code = outlet_code ORDER BY dbms_random.value ) WHERE rownum = 1;
+        SELECT trunc(dbms_random.value(1, 21), 0) INTO var_qty FROM dual;
+        
+        INSERT INTO purchase_order_sku (id, purchase_order_id, sku_id, quantity)
+        VALUES (var_id_sku, var_id, var_sku, var_qty);
+    
+    END LOOP;
+
+END LOOP;
+COMMIT;
+END;
+

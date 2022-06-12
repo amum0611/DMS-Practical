@@ -1,0 +1,1 @@
+SELECT * from purchase_order_sku where ROWNUM <= 25;
