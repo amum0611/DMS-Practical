@@ -1,0 +1,59 @@
+Starting "ADMIN"."EXP_SD_462-10_15_56":  
+Processing object type TABLE_EXPORT/TABLE/TABLE_DATA
+.  estimated "ADMIN"."PURCHASE_HISTORY"                  7.437 MB
+.  estimated "ADMIN"."BILL"                              993.5 KB
+.  estimated "ADMIN"."EXP_SD_454-09_56_32"               170.1 KB
+.  estimated "ADMIN"."SKU"                               9.128 KB
+.  estimated "ADMIN"."CUSTOMER"                          8.421 KB
+.  estimated "ADMIN"."ADDRESS"                           8.238 KB
+.  estimated "ADMIN"."PRODUCT"                           7.759 KB
+.  estimated "ADMIN"."PURCHASE_ORDER_SKU"                7.322 KB
+.  estimated "ADMIN"."LOYALTY"                           7.290 KB
+.  estimated "ADMIN"."BATCH"                             7.062 KB
+.  estimated "ADMIN"."CUSTOMER_AUDIT"                    7.007 KB
+.  estimated "ADMIN"."MANUFACTURER"                      6.820 KB
+.  estimated "ADMIN"."PURCHASE_ORDER"                    6.588 KB
+.  estimated "ADMIN"."OUTLET"                            6.502 KB
+.  estimated "ADMIN"."SUPPLIER"                          6.443 KB
+.  estimated "ADMIN"."CONTACT"                           6.371 KB
+.  estimated "ADMIN"."PRODUCT_CATEGORY"                  5.648 KB
+.  estimated "ADMIN"."BOGUS_CONTACT"                     5.446 KB
+.  estimated "USER_3"."BOGUS_CONTACT"                    4.683 KB
+Processing object type TABLE_EXPORT/TABLE/INDEX/STATISTICS/INDEX_STATISTICS
+Processing object type TABLE_EXPORT/TABLE/STATISTICS/TABLE_STATISTICS
+Processing object type TABLE_EXPORT/TABLE/STATISTICS/MARKER
+Processing object type TABLE_EXPORT/TABLE/TABLE
+Processing object type TABLE_EXPORT/TABLE/RADM_POLICY
+Processing object type TABLE_EXPORT/TABLE/GRANT/OWNER_GRANT/OBJECT_GRANT
+Processing object type TABLE_EXPORT/TABLE/COMMENT
+Processing object type TABLE_EXPORT/TABLE/AUDIT_OBJ
+Processing object type TABLE_EXPORT/TABLE/IDENTITY_COLUMN
+Processing object type TABLE_EXPORT/TABLE/INDEX/INDEX
+Processing object type TABLE_EXPORT/TABLE/CONSTRAINT/CONSTRAINT
+Processing object type TABLE_EXPORT/TABLE/CONSTRAINT/REF_CONSTRAINT
+Processing object type TABLE_EXPORT/TABLE/TRIGGER
+. . exported "ADMIN"."PURCHASE_HISTORY"                  7.808 MB   97402 rows
+. . exported "ADMIN"."BILL"                              1.003 MB   10201 rows
+. . exported "ADMIN"."EXP_SD_454-09_56_32"               627.5 KB     733 rows
+. . exported "ADMIN"."SKU"                               9.367 KB      26 rows
+. . exported "ADMIN"."CUSTOMER"                           8.75 KB      10 rows
+. . exported "ADMIN"."ADDRESS"                           8.492 KB      20 rows
+. . exported "ADMIN"."PRODUCT"                           8.046 KB      10 rows
+. . exported "ADMIN"."PURCHASE_ORDER_SKU"                7.570 KB      11 rows
+. . exported "ADMIN"."LOYALTY"                           7.523 KB       7 rows
+. . exported "ADMIN"."BATCH"                             7.257 KB      10 rows
+. . exported "ADMIN"."CUSTOMER_AUDIT"                    7.296 KB       2 rows
+. . exported "ADMIN"."MANUFACTURER"                      7.039 KB       2 rows
+. . exported "ADMIN"."PURCHASE_ORDER"                    6.765 KB       5 rows
+. . exported "ADMIN"."OUTLET"                            6.640 KB       9 rows
+. . exported "ADMIN"."SUPPLIER"                          6.601 KB       2 rows
+. . exported "ADMIN"."CONTACT"                           6.492 KB      20 rows
+. . exported "ADMIN"."PRODUCT_CATEGORY"                  5.710 KB       5 rows
+. . exported "ADMIN"."BOGUS_CONTACT"                     5.507 KB       1 rows
+. . exported "USER_3"."BOGUS_CONTACT"                        0 KB       0 rows
+ORA-39173: Encrypted data has been stored unencrypted in dump file set.
+Master table "ADMIN"."EXP_SD_462-10_15_56" successfully loaded/unloaded
+******************************************************************************
+Dump file set for ADMIN.EXP_SD_462-10_15_56 is:
+  /u03/dbfs/DFE9D2F6FC53E1FBE0538A18000AE797/data/dpdump/EXPDAT01-10_17_08.DMP
+Job "ADMIN"."EXP_SD_462-10_15_56" successfully completed at Sun Jun 12 10:17:59 2022 elapsed 0 00:00:51
